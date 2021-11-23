@@ -9,7 +9,7 @@ import {
   incrementIfOdd,
   selectCount,
 } from './counterSlice';
-import styles from './Counter.module.css';
+import styles from './Counter.module.scss';
 
 export function Counter() {
   const count = useAppSelector(selectCount);
@@ -57,7 +57,7 @@ export function Counter() {
           Add Async
         </button>
         <button
-          className={styles.button}
+          className={"btn btn-info"}
           onClick={() => dispatch(incrementIfOdd(incrementValue))}
         >
           Add If Odd

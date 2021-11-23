@@ -1,0 +1,51 @@
+.main{
+    margin-top: 94px;
+    color: white;
+    .title{
+        margin-top: 50px;
+        text-align: center;
+        text-shadow: 0px 3px 6px #00000029;
+        letter-spacing: 0px;
+        .title_first {
+            font-size: 63px;
+            line-height: 70px;
+            font-family: Avenir Next;
+        }
+        .title_second {
+            font-weight: bold;
+            font-size: 63px;
+            line-height: 70px;
+            font-family: Avenir Next;
+        }
+    }
+    
+    .subtitle{
+        font-size: 22px;
+        line-height: 40px;
+        font-family:Avenir;
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    .collection{
+        margin-top: 196px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Avenir Next;
+        font-size: 72px;
+        letter-spacing: 2px;
+        // color: #FFFFFF;
+        text-align: center;
+        .collection_title_first{
+            font-weight: 300;
+        }
+        
+        .collection_title_second {
+            font-weight: 500;
+        }
+    }
+    .markIcon{
+        margin-top: 904px;
+    }
+}

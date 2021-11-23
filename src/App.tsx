@@ -7,16 +7,14 @@ import _ from 'lodash'
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="container">
-        <Routes>
-          {
-            _.map(Router.container, each=>{
-              const Component: any = each.Component;
-              return <Route path={each.path} element={<Component />}/>
-            })
-          }
-        </Routes>
-      </div>
+      <Routes>
+        {
+          _.map(Router.container, (each, index)=>{
+            const Component: any = each.Component;
+            return <Route path={each.path} element={<Component />} key={index} />
+          })
+        }
+      </Routes>
     </BrowserRouter>
   )
 }
