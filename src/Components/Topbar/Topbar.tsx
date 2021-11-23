@@ -8,12 +8,16 @@ import styles from './Topbar.module.scss';
 import { TextDecorator } from '../TextDecorator'
 import { Button, IconButton } from '@mui/material';
 
-export const Topbar:React.FC = () => {
+interface TobarProps{
+    mode?: string;
+} 
+
+export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const navigate = useNavigate();
     const goTo = (url:string) => () => {
         navigate(url);
     }
-    const mode = "light";
+    const mode = props.mode ? props.mode : "light";
     return (<div className="mx-5 mt-4 d-flex align-items-center justify-content-between">
     <div className="d-flex align-items-center">
         <IconButton className="ms-3" onClick={goTo("/")} ><img src={Mark} /></IconButton>

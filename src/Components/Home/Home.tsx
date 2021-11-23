@@ -5,10 +5,7 @@ import { Button, Grid } from '@mui/material';
 import styles from './Home.module.scss';
 import Paper from '@mui/material/Paper';
 import Mark from "../../assests/images/mark.png";
-import Scroll from "react-scroll";
-
-const Element = Scroll.Element;
-const scroller = Scroll.scroller;
+import ReactScroll, {Element, scroller} from "react-scroll";
 
 export const CustomButton = styled(Button)({
     background: '#16B4FF 0% 0% no-repeat padding-box',
@@ -33,15 +30,17 @@ export const CustomButton = styled(Button)({
 });
 
 export const Home: React.FC = () => {
+    // const Element = ReactScroll.Element;
+    // const scroller = Scroll.scroller;
     const mode = "light";
     const linkTo = () => {
-        scroller.scrollTo('myScrollToElement', {
-            duration: 1500,
-            delay: 100,
-            smooth: true,
-            containerId: 'ContainerElementID',
-            offset: 50, // Scrolls to element + 50 pixels down the page
-          })
+        // scroller.scrollTo('myScrollToElement', {
+        //     duration: 1500,
+        //     delay: 100,
+        //     smooth: true,
+        //     containerId: 'ContainerElementID',
+        //     offset: 50, // Scrolls to element + 50 pixels down the page
+        //   })
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.title}>
@@ -63,12 +62,12 @@ export const Home: React.FC = () => {
 
         <img src={Mark} className={styles.markIcon} />
 
-        <Element name="myScrollToElement">
+        {/* <Element name="myScrollToElement"> */}
             <div className={styles.collection}>
                 <div className={styles.collection_title_first}>Mint your own</div>
                 <div className={styles.collection_title_second}><b>CTYPTOWHALE</b></div>
             </div>
-        </Element>
+        {/* </Element> */}
         <div style={{ width: '450px', marginTop: '45px' }}>
             <Grid container className="justify-content-center">
                 <Grid item xs={8}>
