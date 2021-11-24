@@ -3,7 +3,7 @@ import { TextDecorator } from '../TextDecorator'
 import { styled } from '@mui/material/styles';
 import { Button, Grid } from '@mui/material';
 import styles from './Home.module.scss';
-import Paper from '@mui/material/Paper';
+import { useNavigate } from 'react-router-dom';
 import Mark from "../../assests/images/mark.png";
 import ReactScroll, {Element, scroller} from "react-scroll";
 
@@ -32,6 +32,10 @@ export const CustomButton = styled(Button)({
 export const Index: React.FC = () => {
     // const Element = ReactScroll.Element;
     // const scroller = Scroll.scroller;
+    const navigate = useNavigate();
+    const goTo = (url: string) => () => {
+        navigate(url);
+    }
     const mode = "light";
     const linkTo = () => {
         // scroller.scrollTo('myScrollToElement', {
@@ -90,7 +94,7 @@ export const Index: React.FC = () => {
                 </Grid>
             </Grid>
         </div>
-        <CustomButton style={{ marginTop: '55px', fontSize: '25px' }}>
+        <CustomButton style={{ marginTop: '55px', fontSize: '25px' }} onClick={goTo("/mint")}>
             MINT NOW
         </CustomButton>
     </div>);

@@ -12,3 +12,142 @@
     text-shadow: 0px 3px 6px #00000029;
     margin-bottom: 20px;
 }
+
+.mint_bg {
+    position: relative;
+    .small-1 {
+        position: absolute !important;
+        top: 702px;
+        left: 918px;
+        width: 20px;
+        height: 20px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    
+    .small-2 {
+        position: absolute !important;
+        top: 822px;
+        left: 415px;
+        width: 74px;
+        height: 74px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    
+    .small-3 {
+        position: absolute !important;
+        top: 509px;
+        left: 714px;
+        width: 34px;
+        height: 34px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    
+    .small-4 {
+        position: absolute !important;
+        top: 612px;
+        left: 256px;
+        width: 20px;
+        height: 20px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    
+    .small-5 {
+        position: absolute !important;
+        top: 888px;
+        left: 25px;
+        width: 21px;
+        height: 21px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    
+    .small-6 {
+        position: absolute !important;
+        top: 1206px;
+        right: 271px;
+        width: 20px;
+        height: 20px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.23;
+    
+        border-radius: 50%;
+    }
+    
+    .small-7 {
+        position: absolute !important;
+        top: 1346px;
+        right: 336px;
+        width: 36px;
+        height: 36px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.23;
+    
+        border-radius: 50%;
+    }
+    
+    .small-8 {
+        position: absolute !important;
+        top: 1411px;
+        right: 318px;
+        width: 20px;
+        height: 20px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.23;
+    
+        border-radius: 50%;
+    }
+    
+    .small-9 {
+        position: absolute !important;
+        top: 972px;
+        left: -34px;
+        width: 69px;
+        height: 69px;
+        background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    
+    .jellyfish-1{
+        position: absolute !important;
+        top: 891px;
+        left: 1009px;
+        width: 103px !important;
+        height: 212px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.19;
+    }
+
+    .jellyfish-2 {
+        position: absolute !important;
+        top: 1076px;
+        left: 283px;
+        width: 103px !important;
+        height: 212px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.19;
+    }
+
+    .jellyfish-3 {
+        position: absolute !important;
+        top: 772px;
+        right: 271px;
+        width: 51px !important;
+        height: 105px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.08;
+    }
+}
+

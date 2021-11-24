@@ -121,11 +121,11 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
             <Grid item xs={4}>
                 <Box className="d-flex flex-column align-items-start justify-content-center r_container" color="white">
                     <Box className="r_title">About</Box>
-                    <Box className="r_container">
+                    <Box className="r_container mb-3">
                         Whales in crypto are legendary icons of wealth and status. They include the likes of Vitalik Buterin and Mark Cuban. Taking the concept of a crypto whale and turning it into a visual representation of a luxury-crypto-themed-whale NFT creates a material representation of the wealth and power that comes with being a crypto whale. To hold the whale makes you the whale. This is less of a product and more of a trophy, a trophy marketed and directed to the largest holders. A way to display your status and unbelievable wealth.
                     </Box>
-                    <Box>
-                        <CustomAnimButton >Go to Opensea</CustomAnimButton>
+                    <Box className="mx-auto">
+                        <CustomAnimButton>Go to Opensea</CustomAnimButton>
                     </Box>
                 </Box>
             </Grid>
