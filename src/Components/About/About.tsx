@@ -3,10 +3,14 @@ import { styled } from '@mui/material/styles';
 import React from 'react';
 import './About.scss';
 import { CircleItem } from './CircleItem';
+import Mark from "../../assests/images/markIcon.png";
 
 export const About: React.FC = () => {
     const mode = "light";
     return (<div className={"main d-flex flex-column align-items-center justify-content-between"}>
+        <div className="d-flex flex-row align-items-center">
+            <img src={Mark} width='70' /><span style={{fontSize: '60px', fontWeight: 700}}>ryptowhales</span>
+        </div>
         <div className={"content"}>
             Whales in crypto are legendary icons of wealth and status. They include the likes of Vitalik Buterin and Mark Cuban. Taking the concept of a crypto whale and turning it into a visual representation of a luxury-crypto-themed-whale NFT creates a material representation of the wealth and power that comes with being a crypto whale. To hold the whale makes you the whale. We intend to auction each unique whale at a steep price in its own native currency. This is less of a product and more of a trophy, a trophy marketed and directed to the largest holders. A way to display your status and unbelievable wealth.
         </div>

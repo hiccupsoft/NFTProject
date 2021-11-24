@@ -7,13 +7,12 @@ import "./styles.scss";
 
 export const Index:React.FC = () => {
     return (
-        <>
-            <Bg bgClassName="ocean-img-hide" />
+        <div className="about_container">
             <Topbar mode="dark" />
             <About />
             <Footer showTitle={true} showButton={true} showIcons={true} >
                 <div className="about_title">NEVER MISS ANYTHING. <b>JOIN NOW</b></div>
             </Footer>
-        </>
+        </div>
     );
 }

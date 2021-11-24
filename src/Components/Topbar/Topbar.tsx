@@ -18,9 +18,9 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
         navigate(url);
     }
     const mode = props.mode ? props.mode : "light";
-    return (<div className="mx-5 mt-4 d-flex align-items-center justify-content-between">
+    return (<div className="px-5 pt-4 d-flex align-items-center justify-content-between">
     <div className="d-flex align-items-center">
-        <IconButton className="ms-3" onClick={goTo("/")} ><img src={Mark} /></IconButton>
+        <IconButton className="ms-3" onClick={goTo("/")} ><img src={Mark} width='50' /></IconButton>
         <TextDecorator className={styles.navText} onClick={goTo("/collection")} mode={mode} >
             Collections
         </TextDecorator>
@@ -29,8 +29,8 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
         </TextDecorator>
     </div>
     <div className="d-flex align-items-center">
-        <IconButton className="mr-4" ><img src={mode==="light"?Dark:Light} /></IconButton>
-        <Button className={styles.connectBtn + " px-4 py-2"} ><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
+        <IconButton className="mx-5" ><img src={mode==="light"?Dark:Light} /></IconButton>
+        <Button className={styles.connectBtn + " px-4 py-2 ms-5"} ><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
     </div>
 </div>);
 }
