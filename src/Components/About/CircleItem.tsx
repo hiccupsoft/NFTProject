@@ -18,7 +18,6 @@ export const Line = styled((props: any) => (
   `;
 
 export const CircleItem: React.FC = () => {
-    const mode = "light";
     return (
         <div className="d-flex flex-column align-items-center" style={{marginTop: '12px'}}>
             <Line />

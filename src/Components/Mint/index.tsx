@@ -1,20 +1,12 @@
 import React,{useState} from 'react';
 import "./styles.scss";
-import { Box, Button, ButtonGroup, Grid, IconButton, styled, TextField } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Box, Button, Grid, styled, } from '@mui/material';
 import Mark from "../../assests/images/markIcon.png";
 import Ether from "../../assests/images/etherIcon.png";
 import CustomAnimButton from '../CustomAnimButton';
 
 interface MintProps {
 }
-
-const Item = styled(Box)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(12),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
 
 const CustomButton = styled(Button)(({theme})=>({
     background: 'transparent linear-gradient(226deg, #DFF6FD 0%, #9DD5E6 100%) 0% 0% no-repeat padding-box',
@@ -46,10 +38,6 @@ const HoverButton = styled(Button)(({theme})=>({
 }));
 
 export const Index: React.FC<MintProps> = (props: MintProps) => {
-    const navigate = useNavigate();
-    const goTo = (url: string) => () => {
-        navigate(url);
-    }
     const [isHover, setHover] = useState(false);
     return (
         <Grid container className="mint_main" >

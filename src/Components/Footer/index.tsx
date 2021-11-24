@@ -4,7 +4,6 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SailingRoundedIcon from '@mui/icons-material/SailingRounded';
 import "./styles.scss";
 import { ButtonGroup, IconButton } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 
 interface FooterProps{
     showTitle?: boolean;
@@ -14,10 +13,6 @@ interface FooterProps{
 }
 
 export const Index:React.FC<FooterProps> = (props: FooterProps) => {
-    const navigate = useNavigate();
-    const goTo = (url:string) => () => {
-        navigate(url);
-    }
     return (
         <div className="footer d-flex flex-column align-items-center justify-content-between" >
             {props.children}

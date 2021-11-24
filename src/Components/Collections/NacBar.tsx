@@ -1,8 +1,8 @@
-import { Box, Button, ButtonGroup } from '@mui/material';
+/* eslint-disable @typescript-eslint/no-redeclare */
+import { Button, ButtonGroup } from '@mui/material';
 import React from 'react';
 import './styles.scss';
 import _ from 'lodash'
-import { width } from '@mui/system';
 
 export enum CollectionsList {
     None, MyCollection, Uncommen, Rare, Epic, Legendary, Crypto

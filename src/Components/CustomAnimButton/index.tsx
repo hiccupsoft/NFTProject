@@ -1,6 +1,5 @@
 import { Box, Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import React, {useState}  from 'react';
+import React   from 'react';
 import SailingRoundedIcon from '@mui/icons-material/SailingRounded';
 import './styles.scss'
 
@@ -10,15 +9,15 @@ interface CustomAnimButtonProps {
 }
 
 const CustomAnimButton:React.FC<CustomAnimButtonProps> = (props:CustomAnimButtonProps) => {
-    const [isHover, setHover] = useState(false);
+    // const [isHover, setHover] = useState(false);
     return <Button 
                 className="anim_btn pe-5 py-2" 
                 variant="outlined" 
                 endIcon={
                     <Box className="d-flex flex-row align-items-center px-2 ms-1" style={{position:'relative'}}><SailingRoundedIcon className="hover_on" /></Box>
                 } 
-                onMouseEnter={()=>setHover(true)}
-                onMouseLeave={()=>setHover(false)} 
+                // onMouseEnter={()=>setHover(true)}
+                // onMouseLeave={()=>setHover(false)} 
             >
         <Box color={props.dark? "#021124":"white"}><b>{props.children}</b></Box>
     </Button>

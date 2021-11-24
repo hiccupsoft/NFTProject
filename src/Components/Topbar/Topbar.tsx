@@ -10,6 +10,11 @@ import { Button, IconButton } from '@mui/material';
 import {Routes} from "../../Routes";
 import _ from 'lodash'
 import Popup from "../PopupModal/Popup"
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import {
+    setDark,
+    getMode,
+} from '../../actions/ToggleMode';
 
 interface TobarProps{
     mode?: string;
@@ -17,6 +22,8 @@ interface TobarProps{
 
 export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const navigate = useNavigate();
+    const isDark = useAppSelector(getMode);
+    const dispatch = useAppDispatch();
     const goTo = (url:string) => () => {
         navigate(url);
     }
@@ -36,7 +43,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
         {renderNavBar()}
     </div>
     <div className="d-flex align-items-center">
-        <IconButton className="mx-5" ><img src={mode==="light"?Dark:Light} /></IconButton>
+        <IconButton className="mx-5" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} /></IconButton>
         <Button className={styles.connectBtn + " px-4 py-2 ms-5"} onClick={()=>setOpenModal(true)}><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
     </div>
     <Popup open={openModal} onClose={()=>setOpenModal(false)} />

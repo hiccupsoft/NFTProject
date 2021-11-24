@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TextDecorator } from '../TextDecorator'
 import { styled } from '@mui/material/styles';
 import { Button, Grid } from '@mui/material';
 import styles from './Home.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../assests/images/mark.png";
-import ReactScroll, {Element, scroller} from "react-scroll";
+// import ReactScroll, {Element, scroller} from "react-scroll";
+import { useAppSelector } from '../../app/hooks';
+import {
+    getMode,
+} from '../../actions/ToggleMode';
 
 export const CustomButton = styled(Button)({
     background: '#16B4FF 0% 0% no-repeat padding-box',
@@ -36,7 +40,8 @@ export const Index: React.FC = () => {
     const goTo = (url: string) => () => {
         navigate(url);
     }
-    const mode = "light";
+    const isDark = useAppSelector(getMode);
+    const mode = isDark?"dark":"light";
     const linkTo = () => {
         // scroller.scrollTo('myScrollToElement', {
         //     duration: 1500,

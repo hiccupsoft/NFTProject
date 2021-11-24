@@ -4,7 +4,6 @@ import { CircleItem } from './CircleItem';
 import Mark from "../../assests/images/markIcon.png";
 
 export const Index: React.FC = () => {
-    const mode = "light";
     return (<div className={"main d-flex flex-column align-items-center justify-content-between"}>
         <div className="d-flex flex-row align-items-center">
             <img src={Mark} width='70' /><span style={{fontSize: '60px', fontWeight: 700}}>ryptowhales</span>

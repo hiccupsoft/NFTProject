@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
@@ -55,7 +56,7 @@ const WalletButton = styled(Button)({
 
 export default function TransitionsModal(props: PopupProps) {
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+    // const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
         props.onClose();
