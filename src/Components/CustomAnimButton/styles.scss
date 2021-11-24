@@ -1,0 +1,14 @@
+.anim_btn {
+  &:hover {
+    .hover_on {
+      position: absolute !important;
+      left: 20px !important;
+    }
+  }
+  position: relative;
+  .hover_on {
+    position: absolute !important;
+    left: 0px !important;
+    transition: 500ms;
+  }
+}

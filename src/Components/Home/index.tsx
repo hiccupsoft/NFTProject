@@ -29,7 +29,7 @@ export const CustomButton = styled(Button)({
     }
 });
 
-export const Home: React.FC = () => {
+export const Index: React.FC = () => {
     // const Element = ReactScroll.Element;
     // const scroller = Scroll.scroller;
     const mode = "light";

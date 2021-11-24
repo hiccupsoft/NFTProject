@@ -1,8 +1,8 @@
 import React  from 'react';
-import { CustomButton } from '../Home/Home';
+import { CustomButton } from '../Home';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SailingRoundedIcon from '@mui/icons-material/SailingRounded';
-import "./Footer.scss";
+import "./styles.scss";
 import { ButtonGroup, IconButton } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ interface FooterProps{
     children?: any;
 }
 
-export const Footer:React.FC<FooterProps> = (props: FooterProps) => {
+export const Index:React.FC<FooterProps> = (props: FooterProps) => {
     const navigate = useNavigate();
     const goTo = (url:string) => () => {
         navigate(url);

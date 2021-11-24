@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Topbar } from "../../Components/Topbar/Topbar"
-import { Home } from "../../Components/Home/Home"
+import { Index as Home } from "../../Components/Home"
 import {Bg} from "../Bg"
-import {Footer} from "../../Components/Footer/Footer"
+import {Index as Footer} from "../../Components/Footer"
 import "./styles.scss"
 
 export const Welcome:React.FC = () => {

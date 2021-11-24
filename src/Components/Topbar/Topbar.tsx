@@ -21,8 +21,8 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     return (<div className="px-5 pt-4 d-flex align-items-center justify-content-between">
     <div className="d-flex align-items-center">
         <IconButton className="ms-3" onClick={goTo("/")} ><img src={Mark} width='50' /></IconButton>
-        <TextDecorator className={styles.navText} onClick={goTo("/collection")} mode={mode} >
-            Collections
+        <TextDecorator className={styles.navText} onClick={goTo("/mint")} mode={mode} >
+            Mint
         </TextDecorator>
         <TextDecorator className={styles.navText} onClick={goTo("/about")} mode={mode} >
             About

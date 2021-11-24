@@ -5,7 +5,7 @@ import './About.scss';
 import { CircleItem } from './CircleItem';
 import Mark from "../../assests/images/markIcon.png";
 
-export const About: React.FC = () => {
+export const Index: React.FC = () => {
     const mode = "light";
     return (<div className={"main d-flex flex-column align-items-center justify-content-between"}>
         <div className="d-flex flex-row align-items-center">
