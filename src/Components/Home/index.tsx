@@ -54,11 +54,11 @@ export const Index: React.FC = () => {
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.title}>
             <div>
-                <TextDecorator className={styles.title_first} mode={mode} >DIGITAL</TextDecorator>
+                <TextDecorator className={styles.title_first} mode={mode} >DIGITAL </TextDecorator>
                 <TextDecorator className={styles.title_second} mode={mode}>CRYPTO WHALES</TextDecorator>
             </div>
             <div>
-                <TextDecorator className={styles.title_first} mode={mode}>FOR</TextDecorator>
+                <TextDecorator className={styles.title_first} mode={mode}>FOR </TextDecorator>
                 <TextDecorator className={styles.title_second} mode={mode}>CRYPTO WHALES.</TextDecorator>
             </div>
         </div>

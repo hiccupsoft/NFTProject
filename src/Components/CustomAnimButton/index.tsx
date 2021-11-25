@@ -2,7 +2,7 @@ import { Box, Button } from '@mui/material';
 import React   from 'react';
 // import SailingRoundedIcon from '@mui/icons-material/SailingRounded';
 import './styles.scss'
-import Ship from "../../assests/images/shiIcon.png";
+import Ship from "../../assests/images/shipIcon.png";
 
 interface CustomAnimButtonProps {
     children?: any
