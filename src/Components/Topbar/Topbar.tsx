@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +15,8 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
     setDark,
     getMode,
+    setCurrentTitle,
+    getCurrentTitle,
 } from '../../actions/ToggleMode';
 
 interface TobarProps{
@@ -24,7 +27,8 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const navigate = useNavigate();
     const isDark = useAppSelector(getMode);
     const dispatch = useAppDispatch();
-    const goTo = (url:string) => () => {
+    const goTo = (url:string, title: string) => () => {
+        dispatch(setCurrentTitle(title));
         navigate(url);
     }
     const [openModal, setOpenModal] = useState(false);
@@ -32,19 +36,19 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const renderNavBar = () => {
         return _.map(Routes.container, (item, id)=> {
             if(item.hidden) return null;
-            return <TextDecorator key={id} className={styles.navText} onClick={goTo(item.path)} mode={mode} >
+            return <TextDecorator key={id} className={styles.navText} style={useAppSelector(getCurrentTitle)===item.title?{color: '#16B4FF'}:{}} onClick={goTo(item.path, item.title)} mode={mode} >
                 {item.title}
             </TextDecorator>
         })
     }
-    return (<div className="px-5 pt-4 d-flex align-items-center justify-content-between">
+    return (<div className="ps-4 pe-5 pt-4 d-flex align-items-center justify-content-between">
     <div className="d-flex align-items-center">
-        <IconButton className="ms-3" onClick={goTo("/")} ><img src={Mark} width='50' /></IconButton>
+        <IconButton className="ms-3" onClick={goTo("/", "")} ><img src={Mark} width='50' /></IconButton>
         {renderNavBar()}
     </div>
     <div className="d-flex align-items-center">
         <IconButton className="mx-5" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} /></IconButton>
-        <Button className={styles.connectBtn + " px-4 py-2 ms-5"} onClick={()=>setOpenModal(true)}><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
+        <Button className={styles.connectBtn + " px-5 py-3 ms-5"} onClick={()=>setOpenModal(true)} sx={{textTransform: 'none', letterSpacing: 2}}><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
     </div>
     <Popup open={openModal} onClose={()=>setOpenModal(false)} />
 </div>);

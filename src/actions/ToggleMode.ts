@@ -3,10 +3,12 @@ import { RootState, AppThunk } from '../app/store';
 
 export interface ModeState {
     isDark: boolean;
+    currentTitle: string;
 }
 
 const initialState: ModeState = {
   isDark: false,
+  currentTitle: '',
 };
 
 
@@ -16,14 +18,18 @@ export const mode = createSlice({
   reducers: {
     setDark:(state) => {
         state.isDark = !state.isDark;
+    },
+    setCurrentTitle: (state, action) => {
+      state.currentTitle = action.payload;
     }
   },
   
 });
 
-export const { setDark } = mode.actions;
+export const { setDark, setCurrentTitle } = mode.actions;
 
 export const getMode = (state: RootState) => state.mode.isDark;
+export const getCurrentTitle = (state: RootState) => state.mode.currentTitle;
 
 
 export default mode.reducer;

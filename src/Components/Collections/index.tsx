@@ -10,7 +10,10 @@ import PWhale from "../../assests/images/img-2.png";
 import UnknowWhale from "../../assests/images/img-unknown.png";
 import _ from 'lodash';
 
-export const Index: React.FC = () => {
+interface CollectionsProps {
+    selConllectionItem?: (id:CollectionsList)=>void;
+}
+export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
     const [itmList, setItmList] = useState<any[]>([]);
     // const [itmListId, setItmListId] = useState(CollectionsList.None)
 
@@ -20,7 +23,8 @@ export const Index: React.FC = () => {
 
     const clickedListItem = (id:CollectionsList) => {
         // setItmListId(id)
-        loadCollectionItems(id)
+        loadCollectionItems(id);
+        props.selConllectionItem && props.selConllectionItem(id);
     }
 
     const loadCollectionItems = (id:CollectionsList) => {

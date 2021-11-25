@@ -3,6 +3,7 @@ import "./styles.scss";
 import { Box, Button, Grid, styled, } from '@mui/material';
 import Mark from "../../assests/images/markIcon.png";
 import Ether from "../../assests/images/etherIcon.png";
+import Ship from "../../assests/images/shiIcon.png";
 import CustomAnimButton from '../CustomAnimButton';
 
 interface MintProps {
@@ -26,7 +27,7 @@ const CustomField = styled((props: any) => (
     text-align: center;
     border-radius: 4px;
     padding: 10px 5px;
-    max-width: 124px;
+    max-width: 195px;
   `;
 const HoverButton = styled(Button)(({theme})=>({
     backgroundColor: '#9B9B9B',
@@ -45,45 +46,38 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
             <Grid item xs={4}>
                 <Box className="d-flex flex-column align-items-center justify-content-center l_container" color="white">
                     <Box className="mint_title">Mint your own</Box>
-                    <div className="d-flex flex-row align-items-center">
-                        <img src={Mark} width='40' /><span style={{ fontSize: '47px', fontWeight: 600 }}>ryptowhales</span>
+                    <div className="d-flex flex-row align-items-center" style={{marginTop: '-20px'}}>
+                        <img src={Mark} width='55' /><span style={{ fontSize: '52px', fontWeight: 600 }}>ryptowhales </span>
+                        <img src={Ship} width='25' className="ms-1" style={{marginTop: -25}} />
                     </div>
-                    <Box className="d-flex flex-column align-items-center justify-content-between l_element">
-                        <Box className="d-flex flex-row px-4 py-2 text_field justify-content-around">
-                            <Box>Total adopted whales: </Box>
-                            <Box>0 / 10,000</Box>
+                    <Box className="d-flex flex-column align-items-center justify-content-between l_element w-100">
+                        <Box className="d-flex flex-row px-4 py-2 text_field justify-content-around align-items-center w-100">
+                            <Box className="py-2" style={{font: 'normal normal 900 25px/34px Avenir'}}>Total adopted whales: </Box>
+                            <Box className="text-right">0 / 10,000</Box>
                         </Box>
-                        <Box className="w-100 px-4 py-3 ether_board mt-3">
-                            <Box color="#16B4FF">Mint 1 CryptoWhale for</Box>
-                            <Box className="d-flex flex-row align-items-center justify-content-start font">
+                        <Box className="w-100 px-4 py-3 ps-5 ether_board mt-3  w-100">
+                            <Box color="#16B4FF" style={{fontSize: 18}} >Mint 1 CryptoWhale for</Box>
+                            <Box className="d-flex flex-row align-items-center justify-content-start">
                                 <img src={Ether} width='30' className="me-3" />
-                                <Box className="me-5">0.01</Box>
-                                <Box><b>ETH</b></Box>
+                                <Box className="ms-3 me-5" style={{fontSize: 24}}>0.01</Box>
+                                <Box style={{fontSize: 24}}><b>ETH</b></Box>
                             </Box>
                         </Box>
                         <Grid container className="w-100 mt-3">
                             <Grid item xs={7}>
-                                <Box className="d-flex flex-column align-items-start justify-content-start">
-                                    <Box color="#16B4FF" >How many whales?</Box>
-                                    <Grid container className="w-100 mt-3" >
-                                        <Grid item xs={1}>
+                                <Box className="d-flex flex-column align-items-start justify-content-start ">
+                                    <Box color="#16B4FF" style={{fontSize:24}}>How many whales?</Box>
+                                    <Box className="w-100 mt-3 d-flex flex-row align-items-start justify-content-center" >
                                             <CustomButton style={{width: 50, height: 50}} >-</CustomButton>
-                                        </Grid>
-                                        <Grid item xs={2} />
-                                        <Grid item xs={5}>
-                                            <CustomField className="input_field" />
-                                        </Grid>
-                                        <Grid item xs={2} />
-                                        <Grid item xs={1}>
+                                            <CustomField className="input_field w-100" />
                                             <CustomButton style={{width: 50, height: 50}}>+</CustomButton>
-                                        </Grid>
-                                    </Grid>
+                                    </Box>
                                 </Box>
                             </Grid>
                             <Grid item xs={1}/>
                             <Grid item xs={4}>
                                 <Box className="d-flex flex-column align-items-start justify-content-start">
-                                    <Box color="#16B4FF" >Total costs</Box>
+                                    <Box color="#16B4FF"  style={{fontSize:24}} >Total costs</Box>
                                     <Box className="w-100 px-3 py-2 total_input mt-3">
                                         <img src={Ether} width='20' />
                                         <span className="ms-1 me-1">0.02</span>
@@ -93,7 +87,7 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                             </Grid>
                         </Grid>
                         <HoverButton 
-                            className="mt-5" 
+                            className="mt-5 py-3 font" 
                             variant="contained" 
                             fullWidth={true} 
                             onMouseEnter={()=>setHover(true)}

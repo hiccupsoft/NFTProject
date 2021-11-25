@@ -9,6 +9,7 @@ import { Grid, IconButton, styled } from '@mui/material';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import Metamask from "../../assests/images/Metamask-logo.png";
 import Wallet from "../../assests/images/walletconnect-logo.png";
+import "./styles.scss"
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -19,8 +20,8 @@ const style = {
 };
 
 const styleContent = {
-    width: 529,
-    height: 515,
+    width: 479,
+    height: 465,
     backgroundColor: 'white',
     boxShadow: '0px 0px 12px #0000001A',
     borderRadius: 13,
@@ -42,7 +43,9 @@ const MetamaskButton = styled(Button)({
     borderRadius: 37,
     height: 60,
     width: '90%',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
+    color: 'white',
+    textTransform: 'none',
 });
 
 const WalletButton = styled(Button)({
@@ -51,7 +54,9 @@ const WalletButton = styled(Button)({
     borderRadius: 37,
     height: 60,
     width: '90%',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
+    color: 'white',
+    textTransform: 'none',
 });
 
 export default function TransitionsModal(props: PopupProps) {
@@ -78,23 +83,26 @@ export default function TransitionsModal(props: PopupProps) {
             BackdropProps={{
                 timeout: 500,
             }}
+            sx={{
+                backdropFilter: "blur(10px)",
+            }}
         >
             <Fade in={open}>
                     <Box sx={style} className="d-flex flex-row">
                         <Grid container>
                             <Grid item xs={11} />
                             <Grid item xs={1} >
-                                <IconButton onClick={handleClose} sx={closeBtn}><CancelRoundedIcon color="primary" style={{fontSize: 60}} /></IconButton>
+                                <IconButton onClick={handleClose} sx={closeBtn}><CancelRoundedIcon style={{fontSize: 60}} /></IconButton>
                             </Grid>
                             <Grid item xs={11}>
                                 <Box sx={styleContent} className="py-5 ps-3 d-flex flex-column align-items-center justify-content-between">
                                     <h2>Connect your wallet</h2>
-                                    <Box className="mt-3 text-center me-2">
+                                    <Box className="text-center wallet_content">
                                         By connecting your wallet, you agree to our Terms of Service and our 
                                         <Box color="#1A5C6F" component="span">Privacy Policy</Box>.
                                     </Box>
-                                    <MetamaskButton endIcon={<img src={Metamask} width='40' />} >MetaMask</MetamaskButton>
-                                    <WalletButton endIcon={<img src={Wallet} width='40' />} >MetaMask</WalletButton>
+                                    <MetamaskButton className="px-5" endIcon={<img src={Metamask} width='40' />} >MetaMask</MetamaskButton>
+                                    <WalletButton  className="px-5" endIcon={<img src={Wallet} width='40' />} >MetaMask</WalletButton>
                                 </Box> 
                             </Grid>
                             <Grid item xs={1} />

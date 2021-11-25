@@ -17,7 +17,7 @@
                 border-radius: 4px;
                 color: #004F74;
                 width: 100%;
-                font: normal normal 900 25px/34px Avenir;
+                font: normal normal medium 25px/34px Avenir;
             }
             .input_field:focus-visible {
                 border: 0.5px solid #086A98;
@@ -39,8 +39,9 @@
             border-radius: 4px;
         }
         .font{
-            text-align: left;
-            font: normal normal 900 25px/34px Avenir;
+            // text-align: left;
+            font-size: 18px;
+            // font: normal normal 900 25px/34px Avenir;
         }
     }
     .r_container {
@@ -51,7 +52,9 @@
         }
         .r_container{
             max-width: 623px;
-            font: normal normal normal 18px/40px Avenir;
+            font-weight: 100;
+            line-height: 40px;
+            // font: normal normal normal 18px/40px Avenir;
         }
     }
 }

@@ -3,7 +3,7 @@ import { CustomButton } from '../Home';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SailingRoundedIcon from '@mui/icons-material/SailingRounded';
 import "./styles.scss";
-import { ButtonGroup, IconButton } from '@mui/material';
+import { ButtonGroup, IconButton, Box } from '@mui/material';
 
 interface FooterProps{
     showTitle?: boolean;
@@ -22,13 +22,14 @@ export const Index:React.FC<FooterProps> = (props: FooterProps) => {
             {props.showButton && <CustomButton style={{ marginTop: '80px', fontSize: '18px' }} endIcon={<ArrowForwardIcon />} >
                 JOIN NOW
             </CustomButton>}
-            {props.showIcons && <ButtonGroup style={{marginBottom: '100px',  marginTop: '110px'}}>
+            {props.showIcons && <ButtonGroup style={{marginBottom: '50px',  marginTop: '276px'}}>
                 <IconButton className="mx-4" ><a href="https://"><SailingRoundedIcon /></a></IconButton>
                 <IconButton className="mx-4"><a href="https://"><i className="fas fa-paper-plane"></i></a></IconButton>
                 <IconButton className="mx-4"><a href="https://twitter.com/"><i className="fab fa-twitter"></i></a></IconButton>
                 <IconButton className="mx-4"><a href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a></IconButton>
                 <IconButton className="mx-4"><a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a></IconButton>
             </ButtonGroup>}
+            <Box className="mb-5" >©2021 CryptoWhales</Box>
         </div>
     );
 }
