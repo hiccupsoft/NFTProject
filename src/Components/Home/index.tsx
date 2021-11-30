@@ -6,7 +6,7 @@ import { Button, Grid } from '@mui/material';
 import styles from './Home.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../assests/images/mark.png";
-import ReactScroll, {Element, scroller} from "react-scroll";
+import {Element, scroller} from "react-scroll";
 import { useAppSelector } from '../../app/hooks';
 import {
     getMode,
@@ -33,9 +33,6 @@ export const CustomButton = styled(Button)({
         transition: 'all 0.3s',
     }
 });
-
-// const Element = ReactScroll.Element;
-// const scroller = ReactScroll.scroller;
 
 export const Index: React.FC = () => {
 
