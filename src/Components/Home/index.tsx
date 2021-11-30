@@ -107,7 +107,7 @@ export const Index: React.FC = () => {
 
          {
           _.map([BWhale, PWhale, BWhale, PWhale, UnknowWhale,BWhale, PWhale, UnknowWhale, UnknowWhale, UnknowWhale], (itm, key)=>{
-                    return <Card key={key} ><BgImg bgSrc={itm} key={key} /></Card>
+                    return <Card key={key} ><BgImg bgSrc={itm} key={key} style={{width: '100%', height:'100%'}}/></Card>
         })}
 
      </Carousel>

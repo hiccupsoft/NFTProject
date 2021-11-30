@@ -11,7 +11,7 @@ export interface CollectionProps {
 export const BgImg = (props: any) => {
     const BgImg = props.bgSrc;
     console.log(BgImg)
-    return BgImg ?  <img className="fron_side" src={BgImg} /> : <Box className="flip_side" />
+    return BgImg ?  <img className="fron_side" src={BgImg} style={props.style} /> : <Box className="flip_side" />
 }
 
 export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => {

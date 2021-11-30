@@ -25,10 +25,10 @@ const CustomCarouselContainer = styled((props: any) => (
     position: absolute;
     width: 100%;
     height: 100%;
-    transform: ${(props)=>`rotateY(calc(${props.offset} * 50deg)) 
-        scaleY(calc(1 + ${props.abs} * -0.4))
-        translateZ(calc(${props.abs} * -30rem))
-        translateX(calc(${props.offset} / ${props.abs} * -5rem))`};
+    transform: ${(props)=>`rotateY(calc(${props.offset} * 60deg)) 
+        scaleY(calc(1 + ${props.abs} * -0.6))
+        translateZ(calc(${props.abs} * -50rem))
+        translateX(calc(${props.offset} / ${props.abs} * -10rem))`};
     transition: all 0.3s ease-out;
 `;
 
