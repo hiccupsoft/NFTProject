@@ -11,6 +11,12 @@ import { useAppSelector } from '../../app/hooks';
 import {
     getMode,
 } from '../../actions/ToggleMode';
+import { Carousel, Card } from '../Carousel';
+import { BgImg } from '../Collections/Collection';
+import _ from 'lodash';
+import BWhale from "../../assests/images/img-1.png";
+import PWhale from "../../assests/images/img-2.png";
+import UnknowWhale from "../../assests/images/img-unknown.png";
 
 export const CustomButton = styled(Button)({
     background: '#16B4FF 0% 0% no-repeat padding-box',
@@ -96,6 +102,15 @@ export const Index: React.FC = () => {
                 </Grid>
             </Grid>
         </div>
+
+     <Carousel className="mt-5">
+
+         {
+          _.map([BWhale, PWhale, BWhale, PWhale, UnknowWhale,BWhale, PWhale, UnknowWhale, UnknowWhale, UnknowWhale], (itm, key)=>{
+                    return <Card key={key} ><BgImg bgSrc={itm} key={key} /></Card>
+        })}
+
+     </Carousel>
         <CustomButton style={{ marginTop: '55px', fontSize: '25px' }} onClick={goTo("/mint")}>
             MINT NOW
         </CustomButton>
