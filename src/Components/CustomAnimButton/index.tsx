@@ -17,9 +17,7 @@ const CustomAnimButton:React.FC<CustomAnimButtonProps> = (props:CustomAnimButton
                 variant="outlined" 
                 endIcon={
                     <Box className="d-flex flex-row align-items-center px-2 ms-1" style={{position:'relative'}}><img width="35" src={Ship} className="hover_on" /></Box>
-                } 
-                // onMouseEnter={()=>setHover(true)}
-                // onMouseLeave={()=>setHover(false)} 
+                }
             >
         <Box color={props.dark? "#021124":"white"}><b style={{letterSpacing: 2, fontSize: 16, textTransform: 'none' }}>{props.children}</b></Box>
     </Button>
