@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import React from 'react';
 import { TextDecorator } from '../TextDecorator'
 import { styled } from '@mui/material/styles';
@@ -5,7 +6,7 @@ import { Button, Grid } from '@mui/material';
 import styles from './Home.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../assests/images/mark.png";
-// import ReactScroll, {Element, scroller} from "react-scroll";
+import ReactScroll, {Element, scroller} from "react-scroll";
 import { useAppSelector } from '../../app/hooks';
 import {
     getMode,
@@ -33,9 +34,11 @@ export const CustomButton = styled(Button)({
     }
 });
 
+// const Element = ReactScroll.Element;
+// const scroller = ReactScroll.scroller;
+
 export const Index: React.FC = () => {
-    // const Element = ReactScroll.Element;
-    // const scroller = Scroll.scroller;
+
     const navigate = useNavigate();
     const goTo = (url: string) => () => {
         navigate(url);
@@ -43,13 +46,10 @@ export const Index: React.FC = () => {
     const isDark = useAppSelector(getMode);
     const mode = isDark?"dark":"light";
     const linkTo = () => {
-        // scroller.scrollTo('myScrollToElement', {
-        //     duration: 1500,
-        //     delay: 100,
-        //     smooth: true,
-        //     containerId: 'ContainerElementID',
-        //     offset: 50, // Scrolls to element + 50 pixels down the page
-        //   })
+        scroller.scrollTo('myScrollToElement', {
+            duration: 1000,
+            delay: 100,
+          })
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.title}>
@@ -71,12 +71,12 @@ export const Index: React.FC = () => {
 
         <img src={Mark} className={styles.markIcon} />
 
-        {/* <Element name="myScrollToElement"> */}
+        <Element name="myScrollToElement">
             <div className={styles.collection}>
                 <div className={styles.collection_title_first}>Mint your own</div>
                 <div className={styles.collection_title_second}><b>CTYPTOWHALE</b></div>
             </div>
-        {/* </Element> */}
+        </Element>
         <div style={{ width: '450px', marginTop: '45px' }}>
             <Grid container className="justify-content-center">
                 <Grid item xs={8}>
