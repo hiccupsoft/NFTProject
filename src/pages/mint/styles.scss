@@ -8,16 +8,6 @@
     background-repeat: no-repeat;
 }
 
-.about_title{
-    font-size: 38px;
-    text-align: center;
-    font-weight: lighter;
-    letter-spacing: 7px;
-    color: #FFFFFF;
-    text-shadow: 0px 3px 6px #00000029;
-    margin-bottom: 20px;
-}
-
 .mint_bg {
     position: relative;
     .small-1 {
@@ -130,7 +120,7 @@
         height: 212px;
         transform: matrix(1, 0, 0, 1, 0, 0);
         mix-blend-mode: screen;
-        opacity: 0.19;
+        opacity: 1;
     }
 
     .jellyfish-2 {
@@ -141,7 +131,7 @@
         height: 212px;
         transform: matrix(1, 0, 0, 1, 0, 0);
         mix-blend-mode: screen;
-        opacity: 0.19;
+        opacity: 1;
     }
 
     .jellyfish-3 {
@@ -152,7 +142,7 @@
         height: 105px;
         transform: matrix(1, 0, 0, 1, 0, 0);
         mix-blend-mode: screen;
-        opacity: 0.08;
+        opacity: 0.48;
     }
 }
 

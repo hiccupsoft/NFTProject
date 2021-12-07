@@ -29,11 +29,11 @@ $card-size: 23rem;
   border: unset;
   
   &.left {
-    transform: translateX(-100%) translatey(-50%);
+    transform: translateX(-100%) translatey(50%);
   }
   
   &.right {
     right: 0;
-    transform: translateX(100%) translatey(-50%);
+    transform: translateX(100%) translatey(50%);
   }
 }

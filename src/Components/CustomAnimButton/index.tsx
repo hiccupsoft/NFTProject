@@ -12,8 +12,8 @@ interface CustomAnimButtonProps {
 const CustomAnimButton:React.FC<CustomAnimButtonProps> = (props:CustomAnimButtonProps) => {
     // const [isHover, setHover] = useState(false);
     return <Button 
-                className="anim_btn pe-5 py-3 px-5" 
-                sx={{ border: '1px solid #16B4FF'}}
+                className="anim_btn pe-5 py-2 px-5" 
+                sx={{ border: '1px solid #16B4FF8E'}}
                 variant="outlined" 
                 endIcon={
                     <Box className="d-flex flex-row align-items-center px-2 ms-1" style={{position:'relative'}}><img width="35" src={Ship} className="hover_on" /></Box>

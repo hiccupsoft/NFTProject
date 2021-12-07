@@ -18,8 +18,8 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
 
     return (<Box className="collection_itm_container d-flex flex-column align-items-center p-1 my-4">
         <BgImg bgSrc={props.bgSrc} />
-        {!props.hiddenBtn && <Box className="w-100 text-center">
+         <Box className="w-100 text-center" style={props.hiddenBtn ? {visibility: 'hidden'}:{visibility: 'visible'}}>
             <CustomAnimButton dark={true}> Get it on Opensea </CustomAnimButton>
-        </Box>}
+        </Box>
     </Box>);
 }

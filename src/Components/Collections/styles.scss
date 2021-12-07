@@ -1,10 +1,18 @@
 .sub_nav_bar {
-    background: #000000 0% 0% no-repeat padding-box;
-    opacity: 0.5;
+    background: rgba(0,0,0,0.5) 0% 0% no-repeat padding-box;
+    // opacity: 0.5;
     .fill_btn{
         background-color: #003C58 !important;
     }
     margin-bottom: 40px;
+}
+
+.sub_nav_bar_active {
+    opacity: 1;
+}
+
+.sub_nav_bar_inactive {
+    opacity: 0.5;
 }
 
 .sub_container {

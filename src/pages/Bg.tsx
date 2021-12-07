@@ -2,8 +2,15 @@
 import React from 'react';
 import jellyfish from "../assests/images/Jellyfish.png";
 import "./style.scss";
+import { useAppSelector } from '../app/hooks';
+import {
+    getMode,
+} from '../actions/ToggleMode';
 
 export const Bg:React.FC = () => {
+
+    const isDark = useAppSelector(getMode);
+
     const renderJellyFish = () => {
         return <>
             <img src={jellyfish} className="jellyfish-1"/>

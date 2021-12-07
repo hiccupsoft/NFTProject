@@ -46,7 +46,9 @@
     }
     .r_container {
         .r_title {
-            font: normal normal bold 50px/115px Mosk;
+            font: Mosk normal normal bold ;
+            font-size: 50px;
+            font-weight: 500;
             letter-spacing: 0px;
             margin-top: 267px;
         }
@@ -54,6 +56,7 @@
             max-width: 623px;
             font-weight: 100;
             line-height: 40px;
+            color: #82B4CC;
             // font: normal normal normal 18px/40px Avenir;
         }
     }

@@ -16,7 +16,7 @@ export const Index:React.FC = () => {
             <Topbar mode="dark" />
             <About />
             <Footer showTitle={true} showButton={true} showIcons={true} >
-                <div className="about_title">NEVER MISS ANYTHING. <b>JOIN NOW</b></div>
+                <div className="about_title">NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
             </Footer>
         </div>
     );

@@ -26,7 +26,7 @@ export const Index:React.FC = () => {
             <Footer showTitle={selItem!==CollectionsList.MyCollection && selItem !== CollectionsList.Uncommen} 
                     showButton={selItem!==CollectionsList.MyCollection && selItem !== CollectionsList.Uncommen}
                     showIcons={true} >
-                {selItem!==CollectionsList.MyCollection && selItem !== CollectionsList.Uncommen &&  <div className="about_title">NEVER MISS ANYTHING. <b>JOIN NOW</b></div>}
+                {selItem!==CollectionsList.MyCollection && selItem !== CollectionsList.Uncommen &&  <div className="about_title">NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>}
             </Footer>
         </div>
     );
