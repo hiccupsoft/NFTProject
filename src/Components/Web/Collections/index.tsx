@@ -1,8 +1,8 @@
 import { Box, Grid } from '@mui/material';
 import React, {useState, useEffect} from 'react';
-import { NaveBar } from './NacBar';
+import { NaveBar } from './NavBar';
 import './styles.scss';
-import { CollectionsList } from './NacBar'
+import { CollectionsList } from './NavBar'
 import {Collection} from './Collection';
 
 import BWhale from "../../../assests/images/img-1.png";

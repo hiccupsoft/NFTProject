@@ -10,7 +10,7 @@ export enum CollectionsList {
 }
 
 const navList = [
-    {className: "fill_btn", title: "My collection", variant: "contained", icon: boxIcon, id: CollectionsList.MyCollection},
+    {className: "fill_btn", title: "My collection", variant: "text", icon: boxIcon, id: CollectionsList.MyCollection},
     { title: "Uncommen Whales", variant: "text", id: CollectionsList.Uncommen},
     { title: "Rare Whales", variant: "text", id: CollectionsList.Rare},
     { title: "Epic Whales", variant: "text", id: CollectionsList.Epic},
@@ -31,7 +31,7 @@ export const NaveBar: React.FC<NaveBar> = (props:NaveBar) => {
 
     const renderNavBar = () => {
         return _.map(navList, (x, id)=>{
-            return <Button className={x.className + " mx-5" + (selItem===x.id?" sub_nav_bar_active":" sub_nav_bar_inactive")} 
+            return <Button className={x.className + (selItem===x.id?" sub_nav_bar_active":" sub_nav_bar_inactive")} 
                             style={{color: 'white'}} 
                             variant={x.variant as any} 
                             endIcon={<img src={x.icon} width="30" />} 

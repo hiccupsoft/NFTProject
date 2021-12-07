@@ -23,12 +23,12 @@ const CustomCarouselContainer = styled((props: any) => (
     <div {...props} />
   ))`
     position: absolute;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     transform: ${(props)=>`rotateY(calc(${props.offset} * 50deg)) 
         scaleY(calc(1 + ${props.abs} * -0.6))
-        translateZ(calc(${props.abs} * -40rem))
-        translateX(calc(${props.offset} / ${props.abs} * -10rem))`};
+        translateZ(calc(${props.abs} * -30rem))
+        translateX(calc(${props.offset} / ${props.abs} * -8rem))`};
     transition: all 0.3s ease-out;
 `;
 
@@ -45,14 +45,15 @@ export const Carousel = ({children, className}: any) => {
   const count = React.Children.count(children);
   
   return (
-    <div className={className + ' carousel'} style={{display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between'}}>
+    <div className={className + ' carousel'} style={{display: 'flex', alignItems: 'center'}}>
       <IconButton style={active>0 ? {}:{visibility: 'hidden'}} disabled={active<=0} className='nav left' onClick={() => setActive(i => i - 1)}><ArrowCircleLeftRoundedIcon color="primary" /></IconButton>
       {React.Children.map(children, (child, i) => (
         <CustomCarouselContainer 
           key={i} abs={Math.abs(active - i) / 3} offset={(active - i) / 3}
           style={{
                 'opacity': Math.abs(active - i) >= MAX_VISIBILITY ? '0' : '1',
-                'display': Math.abs(active - i) > MAX_VISIBILITY ? 'none' : 'block'
+                'display': Math.abs(active - i) >= MAX_VISIBILITY ? 'none' : 'block',
+
             }}
         >
           {child}

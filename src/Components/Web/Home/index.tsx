@@ -100,7 +100,7 @@ export const Index: React.FC = () => {
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.bg + " d-flex flex-column align-items-center justify-content-between"}>
-            <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} />
+            <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="100%" />
             <div className={styles.title}>
                 <div>
                     <TextDecorator className={styles.title_first} mode={mode} >DIGITAL </TextDecorator>
@@ -119,7 +119,7 @@ export const Index: React.FC = () => {
             </DiveButton>
         </div>
 
-        <img src={Mark} className={styles.markIcon} width="70%" />
+        <img src={Mark} className={styles.markIcon} width="50%" />
 
         <Element name="myScrollToElement">
             <div className={styles.collection}>
@@ -127,7 +127,7 @@ export const Index: React.FC = () => {
                 <div className={styles.collection_title_second}><b>CTYPTOWHALE</b></div>
             </div>
         </Element>
-        <div style={{ width: '450px', marginTop: '45px', fontSize: 23 }}>
+        <div style={{ width: '450px', marginTop: '45px', fontSize: 23, marginBottom: 50 }}>
             <Grid container className="justify-content-center">
                 <Grid item xs={8}>
                     Whale species in the ocean:

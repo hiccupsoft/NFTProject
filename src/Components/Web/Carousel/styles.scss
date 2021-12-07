@@ -10,8 +10,9 @@ $card-size: 23rem;
   position: relative;
   width: $card-size;
   height: $card-size;
-  perspective: 500px;
+  perspective: 40%;
   transform-style: preserve-3d;
+  justify-content: space-between;
 }
 
 .nav {
@@ -20,8 +21,8 @@ $card-size: 23rem;
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
-  top: 50%;
+  justify-content: space-around;
+  // top: 50%;
   z-index: 2;
   cursor: pointer;
   user-select: none;
@@ -29,11 +30,21 @@ $card-size: 23rem;
   border: unset;
   
   &.left {
-    transform: translateX(-100%) translatey(50%);
+    transform: translateX(-100%);
   }
   
   &.right {
     right: 0;
-    transform: translateX(100%) translatey(50%);
+    transform: translateX(100%);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .carousel {
+    position: relative;
+    width: $card-size;
+    height: $card-size;
+    perspective: 40%;
+    transform-style: preserve-3d;
+    justify-content: space-around;
   }
 }

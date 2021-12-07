@@ -4,7 +4,7 @@ import { Index as Collections } from "../../../Components/Web/Collections"
 // import {Bg} from "../Bg"
 import {Index as Footer} from "../../../Components/Web/Footer"
 import "./styles.scss";
-import { CollectionsList } from '../../../Components/Web/Collections/NacBar'
+import { CollectionsList } from '../../../Components/Web/Collections/NavBar'
 
 import { useAppSelector } from '../../../app/hooks';
 import {

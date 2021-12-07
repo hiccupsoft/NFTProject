@@ -48,7 +48,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     </div>
     <div className="d-flex align-items-center">
         <IconButton className="mx-5" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} /></IconButton>
-        <Button className={styles.connectBtn + " px-5 py-2 ms-5"} onClick={()=>setOpenModal(true)} sx={{textTransform: 'none', letterSpacing: 2}} ><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
+        <Button className={styles.connectBtn} onClick={()=>setOpenModal(true)} sx={{textTransform: 'none', letterSpacing: 2}} ><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
     </div>
     <Popup open={openModal} onClose={()=>setOpenModal(false)} />
 </div>);
