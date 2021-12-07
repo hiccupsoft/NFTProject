@@ -1,8 +1,8 @@
 // import {Counter} from "./features/counter/Counter"
-import {Welcome} from "./pages/home/Welcome";
-import {Index as About} from "./pages/about"
-import {Index as Mint} from "./pages/mint/Mint"
-import {Index as Collections} from "./pages/collections"
+import {Welcome} from "./pages/web/home/Welcome";
+import {Index as About} from "./pages/web/about"
+import {Index as Mint} from "./pages/web/mint/Mint"
+import {Index as Collections} from "./pages/web/collections"
 
 export const Routes = () => {
 
