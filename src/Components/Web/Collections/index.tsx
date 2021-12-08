@@ -56,7 +56,7 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
         return <Grid container spacing={1} >
             {
                 _.map(itmList, (itm, key)=>{
-                    return <Collection bgSrc={itm} key={key} />
+                    return <Collection bgSrc={itm} key={key} style={{marginRight: 10}}/>
                 })
             }
         </Grid>

@@ -70,9 +70,9 @@ export const Label = styled((props: any)=>(<Paper {...props} />))`
     color: #FFFFFF;
     font: normal normal normal 14px/26px Avenir;
     position: absolute;
-    padding: 2px 10px;
-    top: 125px;
-    right: 40px;
+    padding: ${(props)=>props.cell===2 ? `1px 5px` : '2px 10px'};
+    top: ${(props)=>props.cell===2 ? `70px` : '125px'};
+    right: ${(props)=>props.cell===2 ? `30px` : '40px'};
  `
 
 export const GetItButton = styled((props: any)=>(<button {...props} />))`

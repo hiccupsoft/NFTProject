@@ -64,7 +64,7 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
     return (<Box className={(!isDark?styles.collection_itm_container:styles.collection_itm_container_dark) + " my-4 d-flex flex-column justify-content-center align-items-center h-full"} style={props.style}>
         <ItemTitle isDark={isDark} cell={props.cell} >{props.title}</ItemTitle>
         <BgImg className={props.cell === 2 ? 'my-1':'my-2'} bgSrc={props.bgSrc} style={{position: 'relative'}}/>
-        <Label>{props.price}</Label>
+        <Label cell={props.cell}>{props.price}</Label>
          {renderInfoPage()}
          <GetItButton cell={props.cell} isDark={isDark}>GET IT NOW</GetItButton>
     </Box>);
