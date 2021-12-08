@@ -34,7 +34,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const [openModal, setOpenModal] = useState(false);
     const mode = props.mode ? props.mode : "light";
     const renderNavBar = () => {
-        return _.map(Routes.container, (item, id)=> {
+        return _.map(Routes.webRoute, (item, id)=> {
             if(item.hidden) return null;
             return <TextDecorator key={id} className={styles.navText} style={useAppSelector(getCurrentTitle)===item.title?{color: '#16B4FF'}:{}} onClick={goTo(item.path, item.title)} mode={mode} >
                 {item.title}

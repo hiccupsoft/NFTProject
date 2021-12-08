@@ -53,7 +53,7 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
     }
 
     const renderCollectionContainer = () => {
-        return <Grid container justifyContent="space-between">
+        return <Grid container spacing={1} >
             {
                 _.map(itmList, (itm, key)=>{
                     return <Collection bgSrc={itm} key={key} />

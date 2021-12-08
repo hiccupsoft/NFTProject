@@ -1,5 +1,4 @@
 import React  from 'react';
-import { CustomButton } from '../Home';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import "./styles.scss";
 import { ButtonGroup, IconButton, Box } from '@mui/material';
@@ -7,6 +6,8 @@ import Discord from "../../../assests/images/Discord-icon.png";
 import Telegram from "../../../assests/images/telegram.png";
 import Ship from "../../../assests/images/Opensea-icon.png";
 import Twitter from "../../../assests/images/Twitter-cion.png";
+import useMobile from '../../../hooks/useMobile';
+import { CustomButton } from '../../CustomWidget';
 
 interface FooterProps{
     showTitle?: boolean;

@@ -1,0 +1,184 @@
+.background {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+.background>img {
+    width: 100%;
+}
+
+.ocean-img{
+    margin-top: 200px;
+}
+.ocean-img-hide{
+    margin-top: -577px;
+    height: 1381px;
+}
+
+.linear-image{
+    position:absolute;
+    top: 760px;
+    width: 100%;
+    left: 0px;
+    // height: 3719px;
+    background-position: top;
+    background: transparent linear-gradient(180deg, #053554 0%, #000000 100%) 0% 0% no-repeat padding-box;
+}
+
+.small-1 {
+    position: absolute;
+    top: 37%;
+    left: 44%;
+    width: 10px;
+    height: 10px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-2 {
+    position: absolute;
+    top: 35%;
+    left: 78%;
+    width: 34px;
+    height: 34px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-3 {
+    position: absolute;
+    top: 33%;
+    left: 70%;
+    width: 14px;
+    height: 14px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-4 {
+    position: absolute;
+    top: 53%;
+    left: 40%;
+    width: 10px;
+    height: 10px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-5 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 11px;
+    height: 11px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-6 {
+    position: absolute;
+    top: 24%;
+    right: 30%;
+    width: 10px;
+    height: 10px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.23;
+
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-7 {
+    position: absolute;
+    top: 46%;
+    right: 50%;
+    width: 16px;
+    height: 16px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.23;
+
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-8 {
+    position: absolute;
+    top: 45%;
+    right: 60%;
+    width: 12px;
+    height: 12px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.23;
+
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.small-9 {
+    position: absolute;
+    top: 30%;
+    left: 29%;
+    width: 29px;
+    height: 29px;
+    background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 10;
+}
+.mark-img{
+    position: absolute;
+    top: 1806px;
+    left: 50%;
+    width: 500px !important;
+    height: 500px;
+    transform: translate(-250px, 0);
+    opacity: 1;
+}
+
+.jellyfish-1{
+    position: absolute;
+    top: 27%;
+    left: 56%;
+    width: 51px !important;
+    height: 106px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    mix-blend-mode: screen;
+    opacity: 0.69;
+    z-index: 10;
+}
+
+.jellyfish-2 {
+    position: absolute;
+    top: 38%;
+    left: 68%;
+    width: 34px !important;
+    height: 74px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    mix-blend-mode: screen;
+    opacity: 0.47;
+    z-index: 10;
+}
+
+.jellyfish-3 {
+    position: absolute;
+    top: 46%;
+    right: 79%;
+    width: 17px !important;
+    height: 37px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    mix-blend-mode: screen;
+    opacity: 0.23;
+    z-index: 10;
+}

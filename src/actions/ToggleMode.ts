@@ -8,7 +8,7 @@ export interface ModeState {
 
 const initialState: ModeState = {
   isDark: false,
-  currentTitle: '',
+  currentTitle: 'Home',
 };
 
 

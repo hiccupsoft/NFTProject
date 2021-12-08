@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import React from 'react';
 import { TextDecorator } from '../TextDecorator'
-import { Button, Grid } from '@mui/material';
 import styles from './Home.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../../assests/images/mark.png";
@@ -12,8 +11,8 @@ import { useAppSelector } from '../../../app/hooks';
 import {
     getMode,
 } from '../../../actions/ToggleMode';
-import { Carousel } from '../Carousel';
-import { Collection } from '../Collections/Collection';
+import Carousel from '../Carousel';
+import { Collection, CollectionProps } from '../Collections/Collection';
 import _ from 'lodash';
 import BWhale from "../../../assests/images/img-1.png";
 import PWhale from "../../../assests/images/img-2.png";
@@ -21,6 +20,31 @@ import UnknowWhale from "../../../assests/images/img-unknown.png";
 import bg_light from "../../../assests/images/ocean-background.png";
 import bg_dark from "../../../assests/images/ocean-background-dark.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
+
+const cloneData:CollectionProps[] = [
+    {
+        title: "BTC Whale",
+        hours: 6,
+        min: 34,
+        sec: 9,
+        price: "10 BSC",
+        bgSrc: BWhale,
+    },
+    {
+        title: "ETH Whale",
+        isSold: true,
+        soldPrice: '7.88 ETH',
+        price: "10 BSC",
+        bgSrc: PWhale,
+    },
+    {
+        title: "ETH Whale",
+        isSold: true,
+        soldPrice: '7.88 ETH',
+        price: "10 BSC",
+        bgSrc: UnknowWhale,
+    },
+];
 
 export const Index: React.FC = () => {
 
@@ -38,7 +62,7 @@ export const Index: React.FC = () => {
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.bg + " d-flex flex-column align-items-center justify-content-between"}>
-            <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="100%" />
+            <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="70%" />
             <div className={styles.title}>
                 <div>
                     <TextDecorator className={styles.title_first} mode={mode} >DIGITAL </TextDecorator>
@@ -52,7 +76,7 @@ export const Index: React.FC = () => {
             <div className={styles.subtitle}>
                 <TextDecorator mode={mode}> Only the wealthiest whales can afford the most high end, exclusive Whale NFT’s.</TextDecorator>
             </div>
-            <DiveButton style={{ marginTop: '380px', fontSize: '15px' }} onClick={linkTo}>
+            <DiveButton isMobile={true} style={{ marginTop: '60px', fontSize: '15px' }} onClick={linkTo}>
                 DIVE INTO THE DEEP
             </DiveButton>
         </div>
@@ -60,44 +84,34 @@ export const Index: React.FC = () => {
         <img src={Mark} className={styles.markIcon} width="50%" />
 
         <Element name="myScrollToElement">
+            <div className="d-flex flex-column align-items-center justify-content-center">
             <div className={styles.collection}>
-                <div className={styles.collection_title_first}>Mint your own</div>
-                <div className={styles.collection_title_second}><b>CTYPTOWHALE</b></div>
+                <div className={styles.collection_title_first}>THE </div>
+                <span className={styles.collection_title_second}><b>COLLECTIONS</b></span>
             </div>
+
+            <Carousel>
+                {
+                _.map(cloneData, (itm, key)=>{
+                            return<Collection
+                            bgSrc={itm.bgSrc} 
+                            key={key}
+                            price={itm.price}
+                            title={itm.title}
+                            isSold={itm.isSold}
+                            hours={itm.hours}
+                            min={itm.min}
+                            sec={itm.sec}
+                            soldPrice={itm.soldPrice}
+                            style={{margin: '0 10px'}}
+                        />
+                })}
+
+            </Carousel>
+            <CustomButton isMobile={true} transparent={true} style={{ marginTop: 67, marginBottom: 150, font: 'normal normal medium 13px/18px Avenir', width: '220px !important', textTransform: 'none' }} onClick={goTo("/")}>
+                Discover the whole Collection
+            </CustomButton>
+            </div>                             
         </Element>
-        <div style={{ width: '450px', marginTop: '45px', fontSize: 23, marginBottom: 50 }}>
-            <Grid container className="justify-content-center">
-                <Grid item xs={8}>
-                    Whale species in the ocean:
-                </Grid>
-                <Grid item xs={3}>
-                    10,000
-                </Grid>
-                <Grid item xs={8}>
-                    Mint Fee:
-                </Grid>
-                <Grid item xs={3}>
-                    0.01 ETH
-                </Grid>
-                <Grid item xs={8}>
-                    Max items per Tx:
-                </Grid>
-                <Grid item xs={3}>
-                    15
-                </Grid>
-            </Grid>
-        </div>
-
-     <Carousel className="mt-5">
-
-         {
-          _.map([BWhale, PWhale, BWhale, PWhale, UnknowWhale,BWhale, PWhale, UnknowWhale, UnknowWhale, UnknowWhale], (itm, key)=>{
-                    return <Collection bgSrc={itm} key={key} hiddenBtn={true}></Collection>
-        })}
-
-     </Carousel>
-        <CustomButton style={{ marginTop: 205, fontSize: '25px', marginBottom: 513 }} onClick={goTo("/mint")}>
-            MINT NOW
-        </CustomButton>
     </div>);
 }
