@@ -63,7 +63,7 @@ const Carousel:FC<CarouselProps> = (props: CarouselProps) => {
                 >
                     <div
                         className={`m_carousel-content m_show-2`}
-                        style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+                        style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)`, marginLeft: 50 }}
                     > 
                         {children}
                     </div>

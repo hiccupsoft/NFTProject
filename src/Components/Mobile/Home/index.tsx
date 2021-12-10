@@ -16,10 +16,11 @@ import { Collection, CollectionProps } from '../Collections/Collection';
 import _ from 'lodash';
 import BWhale from "../../../assests/images/whale1.png";
 import PWhale from "../../../assests/images/whale2.png";
-import UnknowWhale from "../../../assests/images/whale3.png";
+import UnknowWhale from "../../../assests/images/whale4.png";
 import bg_light from "../../../assests/images/ocean-background.png";
 import bg_dark from "../../../assests/images/ocean-background-dark.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
+import { WhaleCard } from '../WhaleCard';
 
 const cloneData:CollectionProps[] = [
     {
@@ -28,14 +29,14 @@ const cloneData:CollectionProps[] = [
         min: 34,
         sec: 9,
         price: "10 BSC",
-        bgSrc: BWhale,
+        bgSrc: UnknowWhale,
     },
     {
         title: "ETH Whale",
         isSold: true,
         soldPrice: '7.88 ETH',
         price: "10 BSC",
-        bgSrc: PWhale,
+        bgSrc: UnknowWhale,
     },
     {
         title: "ETH Whale",
@@ -93,16 +94,9 @@ export const Index: React.FC = () => {
             <Carousel>
                 {
                 _.map(cloneData, (itm, key)=>{
-                            return<Collection
+                            return<WhaleCard
                             bgSrc={itm.bgSrc} 
                             key={key}
-                            price={itm.price}
-                            title={itm.title}
-                            isSold={itm.isSold}
-                            hours={itm.hours}
-                            min={itm.min}
-                            sec={itm.sec}
-                            soldPrice={itm.soldPrice}
                             style={{margin: '0 10px'}}
                         />
                 })}
