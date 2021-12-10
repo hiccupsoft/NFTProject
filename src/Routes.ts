@@ -25,5 +25,5 @@ Routes.mobileRoute = [
     {title: "Home", path: "/home", Component: WelcomeMobile},
     {title: "About", path: "/about", Component: AboutMobile},
     {title: "Collections", path: "/collections", Component: CollectionsMobile},
-    {title: "Whalemap", path: "/mint", Component: null},
+    {title: "Whalemap", path: "/mint", Component: WelcomeMobile},
 ];

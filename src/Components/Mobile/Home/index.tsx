@@ -14,9 +14,9 @@ import {
 import Carousel from '../Carousel';
 import { Collection, CollectionProps } from '../Collections/Collection';
 import _ from 'lodash';
-import BWhale from "../../../assests/images/img-1.png";
-import PWhale from "../../../assests/images/img-2.png";
-import UnknowWhale from "../../../assests/images/img-unknown.png";
+import BWhale from "../../../assests/images/whale1.png";
+import PWhale from "../../../assests/images/whale2.png";
+import UnknowWhale from "../../../assests/images/whale3.png";
 import bg_light from "../../../assests/images/ocean-background.png";
 import bg_dark from "../../../assests/images/ocean-background-dark.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
@@ -76,7 +76,7 @@ export const Index: React.FC = () => {
             <div className={styles.subtitle}>
                 <TextDecorator mode={mode}> Only the wealthiest whales can afford the most high end, exclusive Whale NFT’s.</TextDecorator>
             </div>
-            <DiveButton isMobile={true} style={{ marginTop: '60px', fontSize: '15px' }} onClick={linkTo}>
+            <DiveButton ismobile={"true"} style={{ marginTop: '60px', fontSize: '15px' }} onClick={linkTo}>
                 DIVE INTO THE DEEP
             </DiveButton>
         </div>
@@ -108,7 +108,7 @@ export const Index: React.FC = () => {
                 })}
 
             </Carousel>
-            <CustomButton isMobile={true} transparent={true} style={{ marginTop: 67, marginBottom: 150, font: 'normal normal medium 13px/18px Avenir', width: '220px !important', textTransform: 'none' }} onClick={goTo("/")}>
+            <CustomButton ismobile={"true"} transparent={"true"} style={{ marginTop: 67, marginBottom: 150, font: 'normal normal medium 13px/18px Avenir', width: '220px !important', textTransform: 'none' }} onClick={goTo("/")}>
                 Discover the whole Collection
             </CustomButton>
             </div>                             

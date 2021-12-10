@@ -32,14 +32,15 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
         if(props.isSold) {
             return (<Box className={props.cell === 2 ? 'my-2':'my-4'} style={{marginRight: 'auto'}}>
                 <Box className={styles.sub_title_font} style={isDark?{color: 'white'}:{}}>Auction ended</Box>
-                {/* <Box className={styles.main_info_font} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</Box> */}
                 <table width="100%">
-                    <tr>
-                        <td className={props.cell === 2 ? styles.main_info_font2 : styles.main_info_font} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</td>
-                    </tr>
-                    <tr>
-                        <td ></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td className={props.cell === 2 ? styles.main_info_font2 : styles.main_info_font} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                        </tr>
+                    </tbody>
                 </table>
             </Box>)
         } else {
@@ -62,10 +63,10 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
     }
 
     return (<Box className={(!isDark?styles.collection_itm_container:styles.collection_itm_container_dark) + " my-4 d-flex flex-column justify-content-center align-items-center h-full"} style={props.style}>
-        <ItemTitle isDark={isDark} cell={props.cell} >{props.title}</ItemTitle>
+        <ItemTitle isdark={isDark} cell={props.cell} >{props.title}</ItemTitle>
         <BgImg className={props.cell === 2 ? 'my-1':'my-2'} bgSrc={props.bgSrc} style={{position: 'relative'}}/>
         <Label cell={props.cell}>{props.price}</Label>
          {renderInfoPage()}
-         <GetItButton cell={props.cell} isDark={isDark}>GET IT NOW</GetItButton>
+         <GetItButton cell={props.cell} isdark={isDark}>GET IT NOW</GetItButton>
     </Box>);
 }

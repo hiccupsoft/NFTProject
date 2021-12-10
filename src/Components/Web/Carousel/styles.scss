@@ -31,10 +31,11 @@ $card-size: 23rem;
   
   &.left {
     transform: translateX(-100%);
+    left: 0px;
   }
   
   &.right {
-    right: 0;
+    right: 10px;
     transform: translateX(100%);
   }
 }
@@ -46,5 +47,29 @@ $card-size: 23rem;
     perspective: 40%;
     transform-style: preserve-3d;
     justify-content: space-around;
+  }
+  .nav {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // top: 50%;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+    background: unset;
+    border: unset;
+    
+    &.left {
+      transform: translateX(-100%);
+      left: 10px;
+    }
+    
+    &.right {
+      right: 10px;
+      transform: translateX(100%);
+    }
   }
 }

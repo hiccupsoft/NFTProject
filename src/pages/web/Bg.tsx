@@ -10,6 +10,7 @@ export const Bg:React.FC = () => {
             <img src={jellyfish} className="jellyfish-1"/>
             <img src={jellyfish} className="jellyfish-2"/>
             <img src={jellyfish} className="jellyfish-3"/>
+            <img src={jellyfish} className="jellyfish-4"/>
         </>
     }
 

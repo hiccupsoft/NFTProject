@@ -41,7 +41,7 @@ const RightSidebar: FC<RightSidebarProps> = (props: RightSidebarProps) => {
     const renderNavBar = () => {
         return _.map(Routes.mobileRoute, (item, id)=> {
             if(item.hidden) return null;
-            return <MenuButton key={id} className="mb-4" variant= "outlines" isFilled={currentTitle===item.title}  onClick={goTo(item.path, item.title)} isDark={isDark} >
+            return <MenuButton key={id} className="mb-4" variant= "outlines" isfilled={currentTitle===item.title ? "true":"false"}  onClick={goTo(item.path, item.title)} isdark={isDark} >
                 {item.title}
             </MenuButton>
         })

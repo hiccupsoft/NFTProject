@@ -5,9 +5,9 @@ import styles from './styles.module.scss';
 import { CollectionsList } from './NavBar'
 import {Collection, CollectionProps} from './Collection';
 
-import BWhale from "../../../assests/images/img-1.png";
-import PWhale from "../../../assests/images/img-2.png";
-import UnknowWhale from "../../../assests/images/img-unknown.png";
+import BWhale from "../../../assests/images/whale1.png";
+import PWhale from "../../../assests/images/whale2.png";
+import UnknowWhale from "../../../assests/images/whale3.png";
 import sqare from "../../../assests/images/square.png";
 import quawts from "../../../assests/images/squares.png";
 import _ from 'lodash';
@@ -104,10 +104,10 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
     }
 
     const renderCollectionContainer = () => {
-        return <Grid container className={"px-4"} style={grid === 2 ? {}: {marginLeft: '50%', transform: 'translateX(-50%)'}}>
+        return <Grid container className={"px-4"} style={grid === 2 ? {}: {margin: '30px 70px'}} spacing={grid === 2 ? 2:0}>
             {
                 _.map(itmList, (itm, key)=>{
-                    return <Grid item xs={12 /grid}>
+                    return <Grid item xs={12 /grid} key={key}>
                         <Collection
                             bgSrc={itm.bgSrc} 
                             key={key}
@@ -119,7 +119,7 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
                             sec={itm.sec}
                             soldPrice={itm.soldPrice}
                             cell={grid}
-                            style={grid === 2 ? {width: 185, height: 358} : {width: 355, height: 505}}
+                            // style={grid === 2 ? {width: 185, height: 358} : {width: 355, height: 505}}
                         />
                     </Grid>
                 })

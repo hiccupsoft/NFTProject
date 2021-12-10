@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React,{useState} from 'react';
 import "./styles.scss";
 import { Box, Button, Grid, styled, } from '@mui/material';
 import Mark from "../../../assests/images/markIcon.png";
 import Ether from "../../../assests/images/etherIcon.png";
 import Ship from "../../../assests/images/shipIcon.png";
+import Crypto from "../../../assests/images/cyptowhales.png";
 import CustomAnimButton from '../CustomAnimButton';
 
 interface MintProps {
@@ -23,15 +25,16 @@ const CustomField = styled((props: any) => (
     background: #073C58 0% 0% no-repeat padding-box;
     border: 0.5px solid #086A98;
     color: white;
-    font: normal normal medium 25px/29px Work Sans !important;
     text-align: center;
     border-radius: 4px;
     padding: 10px 5px;
-    max-width: 195px;
+    max-width: 130px;
+    font: normal normal 600 18px/21px Work Sans !important;
   `;
 const HoverButton = styled(Button)(({theme})=>({
     backgroundColor: '#9B9B9B',
     color: 'white',
+    borderRadius: 5,
     '@:hover':{
         backgroundColor: '#16B4FF',
         color: 'white',
@@ -47,7 +50,7 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                 <Box className="d-flex flex-column align-items-center justify-content-center l_container" color="white">
                     <Box className="mint_title">Mint your own</Box>
                     <div className="d-flex flex-row align-items-center" style={{marginTop: '-20px'}}>
-                        <img src={Mark} width='55' /><span style={{ fontSize: '52px', fontWeight: 600 }}>ryptowhales </span>
+                        <img src={Crypto} width='350' className='mt-2' />
                         <img src={Ship} width='25' className="ms-1" style={{marginTop: -25}} />
                     </div>
                     <Box className="d-flex flex-column align-items-center justify-content-between l_element w-100">
@@ -67,7 +70,7 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                             <Grid item xs={7}>
                                 <Box className="d-flex flex-column align-items-start justify-content-start ">
                                     <Box color="#16B4FF" style={{fontSize:24}}>How many whales?</Box>
-                                    <Box className="w-100 mt-3 d-flex flex-row align-items-start justify-content-center" >
+                                    <Box className="w-100 mt-3 d-flex flex-row align-items-center justify-content-between" >
                                             <CustomButton style={{width: 50, height: 50}} >-</CustomButton>
                                             <CustomField className="input_field w-100" />
                                             <CustomButton style={{width: 50, height: 50}}>+</CustomButton>
@@ -78,10 +81,10 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                             <Grid item xs={4}>
                                 <Box className="d-flex flex-column align-items-start justify-content-start">
                                     <Box color="#16B4FF"  style={{fontSize:24}} >Total costs</Box>
-                                    <Box className="w-100 px-3 py-2 total_input mt-3">
+                                    <Box className="w-100 py-2 px-3 total_input mt-3 d-flex flex-row align-items-center justify-content-between">
                                         <img src={Ether} width='20' />
                                         <span className="ms-1 me-1">0.02</span>
-                                        <span >ETH</span>
+                                        <span style={{fontFamily: 'Roboto'}}>ETH</span>
                                     </Box>
                                 </Box>
                             </Grid>

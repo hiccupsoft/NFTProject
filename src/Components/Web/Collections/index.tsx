@@ -5,9 +5,9 @@ import './styles.scss';
 import { CollectionsList } from './NavBar'
 import {Collection} from './Collection';
 
-import BWhale from "../../../assests/images/img-1.png";
-import PWhale from "../../../assests/images/img-2.png";
-import UnknowWhale from "../../../assests/images/img-unknown.png";
+import BWhale from "../../../assests/images/whale1.png";
+import PWhale from "../../../assests/images/whale2.png";
+import UnknowWhale from "../../../assests/images/whale3.png";
 import _ from 'lodash';
 
 interface CollectionsProps {
@@ -53,10 +53,12 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
     }
 
     const renderCollectionContainer = () => {
-        return <Grid container spacing={1} >
+        return <Grid container spacing={6} justifyContent={"space-between"} alignItems={"center"} >
             {
                 _.map(itmList, (itm, key)=>{
-                    return <Collection bgSrc={itm} key={key} style={{marginRight: 10}}/>
+                    return <Grid item md={3} key={key}> 
+                    <Collection bgSrc={itm} />
+                    </Grid>
                 })
             }
         </Grid>

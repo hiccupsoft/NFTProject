@@ -149,20 +149,20 @@
 
 .jellyfish-1{
     position: absolute;
-    top: 27%;
+    top: 34%;
     left: 56%;
-    width: 103px !important;
-    height: 212px;
+    width: 115px !important;
+    height: 230px;
     transform: matrix(1, 0, 0, 1, 0, 0);
     mix-blend-mode: screen;
-    opacity: 0.89;
+    opacity: 0.95;
     z-index: 10;
 }
 
 .jellyfish-2 {
     position: absolute;
-    top: 38%;
-    left: 68%;
+    top: 28%;
+    left: -3%;
     width: 103px !important;
     height: 212px;
     transform: matrix(1, 0, 0, 1, 0, 0);
@@ -173,12 +173,24 @@
 
 .jellyfish-3 {
     position: absolute;
-    top: 46%;
-    right: 79%;
-    width: 51px !important;
-    height: 105px;
+    top: 40%;
+    right: 5%;
+    width: 77px !important;
+    height: 170px;
     transform: matrix(1, 0, 0, 1, 0, 0);
     mix-blend-mode: screen;
-    opacity: 0.23;
+    opacity: 0.58;
+    z-index: 10;
+}
+
+.jellyfish-4 {
+    position: absolute;
+    top: 46%;
+    right: 85%;
+    width: 70px !important;
+    height: 155px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    mix-blend-mode: screen;
+    opacity: 0.73;
     z-index: 10;
 }

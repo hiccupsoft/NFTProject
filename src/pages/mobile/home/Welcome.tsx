@@ -15,9 +15,9 @@ export const WelcomeMobile:React.FC = () => {
     const isDark = useAppSelector(getMode);
 
     return (
-        <div className={isDark? "home_container_dark":"home_container"}>
+        <div className={isDark? "m_home_container_dark":"m_home_container"}>
             <Bg />
-            {isDark && <div className="dark_theme_bg">
+            {isDark && <div className="m_dark_theme_bg">
                 <Topbar mode="transparent"/>
                 <Home />
             </div>}

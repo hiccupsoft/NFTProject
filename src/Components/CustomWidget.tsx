@@ -9,8 +9,8 @@ export const DiveButton = styled((props: any)=>(<Button {...props} />))`
     line-height: 26px;
     font-family: Avenir Light;
     letter-spacing: 0.95px;
-    width: ${(props)=>props.isMobile ? '204px' : '341px'};
-    height: ${(props)=>props.isMobile ? '40px' : '62px'};
+    width: ${(props)=>props.ismobile ? '204px' : '341px'};
+    height: ${(props)=>props.ismobile ? '40px' : '62px'};
     color: #FFFFFF;
     padding: 10px;
     transition: all 0.3s;
@@ -28,16 +28,16 @@ export const DiveButton = styled((props: any)=>(<Button {...props} />))`
         transform: translateX(-50%) rotate(135deg);
     }
     &:hover {
-        width: ${(props)=>props.isMobile ? '214px' : '365px'};
-        height: ${(props)=>props.isMobile ? '46px' : '66px'};
+        width: ${(props)=>props.ismobile ? '214px' : '365px'};
+        height: ${(props)=>props.ismobile ? '46px' : '66px'};
         background: #16B4FF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 33px #16B4FF;
         border-radius: 39px;
-        letter-spacing: ${(props)=>props.isMobile ? '0.95px' : '3.8px'};
+        letter-spacing: ${(props)=>props.ismobile ? '0.95px' : '3.8px'};
         transition: all 0.3s;
     }
     &:hover:before {
-        bottom: ${(props)=>props.isMobile ? '-30px' : '-80px'};
+        bottom: ${(props)=>props.ismobile ? '-30px' : '-80px'};
     }
 `
 
@@ -48,18 +48,18 @@ export const CustomButton = styled((props: any)=>(<Button {...props} />))`
     border-radius: 31px;
     line-height: 26px;
     font-family: Avenir Light;
-    font-size: ${(props)=>props.isMobile ? '11px !important' : '18px !important'};
+    font-size: ${(props)=>props.ismobile ? '11px !important' : '18px !important'};
     letter-spacing: 0.95px;
-    padding: ${(props)=>(props.isMobile ? '10px 25px !important': '20px 70px !important')};
+    padding: ${(props)=>(props.ismobile ? '10px 25px !important': '20px 70px !important')};
     color: #FFFFFF;
     padding: 10px;
     transition: all 0.3s;
     &:hover {
-        padding: ${(props)=>(props.isMobile ? '11px 26px !important': '22px 72px !important')};
+        padding: ${(props)=>(props.ismobile ? '11px 26px !important': '22px 72px !important')};
         background: #16B4FF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 50px #16B4FF;
         border-radius: 39px;
-        letter-spacing: ${(props)=>props.isMobile ? '1.6px' : '3.8px'};
+        letter-spacing: ${(props)=>props.ismobile ? '1.6px' : '3.8px'};
         transition: all 0.3s;
     }
 `;
@@ -81,9 +81,9 @@ export const GetItButton = styled((props: any)=>(<button {...props} />))`
     border: 1px solid #025881;
     border-radius: ${(props)=>props.cell ? `${10/props.cell}px  !important` : '10px !important'};
     width: 100%;
-    padding: ${(props)=>props.cell ? `${25/props.cell}px  !important` : '25px !important'};
+    padding: ${(props)=>props.cell ? `${16/props.cell}px  !important` : '16px !important'};
     font: normal normal 900 15px/20px Avenir;
-    color: ${(props)=>props.isDark?'white':'#003C58'};
+    color: ${(props)=>props.isdark?'white':'#003C58'};
     letter-spacing: ${(props)=>props.cell ? `${4/props.cell}px` : '4px'};
 `
 
@@ -93,19 +93,20 @@ export const ItemTitle = styled((props: any)=>(<Box {...props} />))`
     padding: ${(props)=>props.cell ? `${20/props.cell}px` : '20px'};
     width: 100%;
     font: normal normal 900 15px/20px Avenir;
-    font-size: ${(props)=>props.cell ? `${40/props.cell}px` : '40px'};
-    color: ${(props)=>props.isDark?'white':'#003C58'};
+    font-size: ${(props)=>props.cell ? `${26/props.cell}px` : '30px'};
+    color: ${(props)=>props.isdark?'white':'#003C58'};
+    text-align: center
 `
 
 export const MenuButton = styled((props: any)=>(<Button {...props} />))`
     background: ${
         (props)=>{
-            if(!props.isDark)
-                return props.isFilled ? '#053554 0% 0% no-repeat padding-box' : '';
-            else return props.isFilled ? `#16B4FF 0% 0% no-repeat padding-box` : ''
+            if(!props.isdark)
+                return props.isfilled==="true" ? '#053554 0% 0% no-repeat padding-box' : '';
+            else return props.isfilled==="true" ? `#16B4FF 0% 0% no-repeat padding-box` : ''
     }};
     color: white;
     border-radius: 8px;
-    border: ${(props)=>props.isDark ? `1px solid #16B4FF` : '1px solid #053554'};
+    border: ${(props)=>props.isdark ? `1px solid #16B4FF` : '1px solid #053554'};
     min-width: 146px;
 ` 

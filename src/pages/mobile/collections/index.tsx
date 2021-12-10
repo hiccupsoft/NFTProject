@@ -18,7 +18,7 @@ export const Index:React.FC = () => {
         setIte(id);
     }
     return (
-        <div className = {isDark? 'collection_container_dark d-flex flex-column' : 'collection_container d-flex flex-column'}>
+        <div className = {isDark? 'm_collection_container_dark d-flex flex-column' : 'm_collection_container d-flex flex-column'}>
             <Topbar />
             <Collections selConllectionItem={selConllectionItem} />
             <Footer showTitle={true} showButton={true} showIcons={true} >

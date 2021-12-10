@@ -15,9 +15,9 @@ import {
 import { Carousel } from '../Carousel';
 import { Collection } from '../Collections/Collection';
 import _ from 'lodash';
-import BWhale from "../../../assests/images/img-1.png";
-import PWhale from "../../../assests/images/img-2.png";
-import UnknowWhale from "../../../assests/images/img-unknown.png";
+import BWhale from "../../../assests/images/whale1.png";
+import PWhale from "../../../assests/images/whale2.png";
+import UnknowWhale from "../../../assests/images/whale3.png";
 import bg_light from "../../../assests/images/ocean-background.png";
 import bg_dark from "../../../assests/images/ocean-background-dark.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
@@ -62,10 +62,10 @@ export const Index: React.FC = () => {
         <Element name="myScrollToElement">
             <div className={styles.collection}>
                 <div className={styles.collection_title_first}>Mint your own</div>
-                <div className={styles.collection_title_second}><b>CTYPTOWHALE</b></div>
+                <div className={styles.collection_title_second}>CTYPTOWHALE</div>
             </div>
         </Element>
-        <div style={{ width: '450px', marginTop: '45px', fontSize: 23, marginBottom: 50 }}>
+        <div style={{ width: '450px', marginTop: '45px', fontSize: 23, marginBottom: 50, fontFamily: 'Roboto', fontWeight: 100 }}>
             <Grid container className="justify-content-center">
                 <Grid item xs={8}>
                     Whale species in the ocean:
