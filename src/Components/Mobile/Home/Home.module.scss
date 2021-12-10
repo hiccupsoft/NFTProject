@@ -1,23 +1,23 @@
-.main{
+.m_main{
     color: white;
 
-    .title{
+    .m_title{
         text-align: center;
         text-shadow: 0px 3px 6px #00000029;
         letter-spacing: 3px;
         z-index: 0;
         margin-bottom: 15px;
-        .title_first {
+        .m_title_first {
             line-height: 40px;
             font: normal normal normal 32px/36px Avenir Next;
         }
-        .title_second {
+        .m_title_second {
             line-height: 40px;
             font: normal normal bold 36px/40px Avenir Next;
         }
     }
     
-    .subtitle{
+    .m_subtitle{
         font-size: 20px;
         line-height: 40px;
         font-weight: 400;
@@ -26,26 +26,26 @@
         max-width: 430px;
         margin: 0 20px
     }
-    .collection{
+    .m_collection{
         margin-top: 250px;
         font-size: 30px;
         letter-spacing: 3px;
         text-align: center;
-        .collection_title_first{
+        .m_collection_title_first{
             font-weight: lighter;
             font-size: 25px;
             display: inline;
         }
         
-        .collection_title_second {
+        .m_collection_title_second {
             font-weight: 300;
             font-size: 30px;
         }
     }
-    .markIcon{
+    .m_markIcon{
         margin-top: 550px;
     }
-    .bg {
+    .m_bg {
         padding-top: 94px;
         padding-bottom: 513px;
         width: 100%;
@@ -53,7 +53,7 @@
         background-size: 100% 100%;
         position: relative;
     }
-    .bg_img {
+    .m_bg_img {
         position: absolute;
         width: 100%;
         top: 142px;

@@ -1,8 +1,8 @@
-.sub_nav_bar {
+.m_sub_nav_bar {
     background: rgba(0,0,0,0.5) 0% 0% no-repeat padding-box;
     padding: 0 40px; 
-    // opacity: 0.5;
-    .fill_btn{
+    // opacity: 0.m_5;
+    .m_fill_btn{
         background-color: #003C58 !important;
         min-width: 140px !important;
         margin-left: 20px;
@@ -12,7 +12,7 @@
     position: relative;
 }
 
-.sub_nav_bar_active {
+.m_sub_nav_bar_active {
     opacity: 1;
     font: normal normal medium Avenir;
     font-size: 11px;
@@ -23,7 +23,7 @@
     border-bottom: 1px solid white !important;
 }
 
-.sub_nav_bar_inactive {
+.m_sub_nav_bar_inactive {
     opacity: 0.5;
     font: normal normal medium Avenir;
     font-size: 11px;
@@ -33,62 +33,62 @@
     align-items:center;
 }
 
-.sub_container {
-    margin-bottom: 50px;
+.m_sub_container {
+    margin-bottom: 150px;
     margin-top: 40px;
 }
 
-.title1 {
+.m_title1 {
     font: normal normal normal 16px/16px Avenir;
     color: white;
 }
 
-.title2 {
+.m_title2 {
     font: normal normal 900 16px/16px Avenir;
     color: white;
 }
 
-.collection_itm_container {
+.m_collection_itm_container {
     background: transparent linear-gradient(180deg, #E2F8FF 0%, #99D3E5 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 20px #16B4FF31;
     filter: blur(0px);
     border-radius: 25px;
     padding: 21px;
     position: relative;
-    .flip_side {
+    .m_flip_side {
         background: #086A98 0% 0% no-repeat padding-box;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         margin-bottom: 10px;
     }
-    .fron_side {
+    .m_fron_side {
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         margin-bottom: 10px;
     }
 }
 
-.collection_itm_container_dark{
+.m_collection_itm_container_dark{
     background: transparent linear-gradient(0deg, #003C58 0%, #00121A 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 0px 20px #16B4FF31;
     filter: blur(0px);
     border-radius: 25px;
     padding: 21px;
     position: relative;
-    .flip_side {
+    .m_flip_side {
         background: #086A98 0% 0% no-repeat padding-box;
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         margin-bottom: 10px;
     }
-    .fron_side {
+    .m_fron_side {
         border-top-left-radius: 22px;
         border-top-right-radius: 22px;
         margin-bottom: 10px;
     }
 }
 
-.modeBtn {
+.m_modeBtn {
     border-bottom: 1px solid #004F74;
     width: 130px;
     right: 0px;
@@ -96,16 +96,16 @@
     position: absolute;
 }
 
-.modeBtnContainer {
+.m_modeBtnContainer {
     padding: 5px;
 }
 
-.modeBtnContainer_active {
+.m_modeBtnContainer_active {
     border: 0.5px solid #004F74;
     padding: 5px;
 }
 
-.subTitle{
+.m_subTitle{
     padding-left: 40px;
     padding-right:10px;
     margin-top: 30px;
@@ -116,41 +116,41 @@
     width: fit-content;
 }
 
-.main_info_font {
+.m_main_info_font {
     font: normal normal bold 22px/26px Space Grotesk;
     color: #003C58;
     text-align: left;
     padding: 10px 20px !important;
 }
 
-.main_info_font2 {
+.m_main_info_font2 {
     font: normal normal bold 12px Space Grotesk;
     color: #003C58;
     text-align: left;
     padding: 3px 10px !important;
 }
 
-.sub_title_font2 {
+.m_sub_title_font2 {
     text-align: left;
     font: normal normal normal 14px/26px Space Grotesk;
     color: #003C58;
     padding: 0px 10px !important;
 }
 
-.sub_title_font {
+.m_sub_title_font {
     text-align: left;
     font: normal normal normal 12px Space Grotesk;
     color: #003C58;
     padding: 0px 20px !important;
 }
 
-.time_font2 {
+.m_time_font2 {
     font: normal normal normal 15px/35px Space Grotesk;
     color: #16B4FF;
     padding: 3px 10px !important;
 }
 
-.time_font {
+.m_time_font {
     font: normal normal normal 12px Space Grotesk;
     color: #16B4FF;
     padding: 10px 20px !important;

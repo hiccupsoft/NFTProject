@@ -50,12 +50,12 @@ export const CustomButton = styled((props: any)=>(<Button {...props} />))`
     font-family: Avenir Light;
     font-size: ${(props)=>props.ismobile ? '11px !important' : '18px !important'};
     letter-spacing: 0.95px;
-    padding: ${(props)=>(props.ismobile ? '10px 25px !important': '20px 70px !important')};
+    padding: ${(props)=>(props.ismobile ? '8px 50px !important': '20px 70px !important')};
     color: #FFFFFF;
     padding: 10px;
     transition: all 0.3s;
     &:hover {
-        padding: ${(props)=>(props.ismobile ? '11px 26px !important': '22px 72px !important')};
+        padding: ${(props)=>(props.ismobile ? '10px 52px !important': '22px 72px !important')};
         background: #16B4FF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 50px #16B4FF;
         border-radius: 39px;

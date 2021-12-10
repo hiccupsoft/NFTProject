@@ -22,7 +22,7 @@ export const Index:React.FC = () => {
             <Topbar />
             <Collections selConllectionItem={selConllectionItem} />
             <Footer showTitle={true} showButton={true} showIcons={true} >
-                <div className={"about_title"}>NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
+                <div className={"m_about_title"}>NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
             </Footer>
         </div>
     );

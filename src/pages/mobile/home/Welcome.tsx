@@ -26,7 +26,7 @@ export const WelcomeMobile:React.FC = () => {
                 <Home />
             </>}
             <Footer showTitle={true} showButton={true} showIcons={true} >
-                <div className="about_title">NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
+                <div className="m_about_title">NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
             </Footer>
         </div>
     );

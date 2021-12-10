@@ -42,7 +42,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
         <IconButton className="ms-3" onClick={goTo("/", "")} ><img src={Mark} width='30' /></IconButton>
     </div>
     <div className="d-flex align-items-center justify-content-around w-100">
-        <Button className={`connectBtn-${mode}`} onClick={()=>setOpenModal(true)} sx={{textTransform: 'none'}} >Connect wallet</Button>
+        <Button className={`m_connectBtn-${mode}`} onClick={()=>setOpenModal(true)} sx={{textTransform: 'none'}} >Connect wallet</Button>
         <IconButton className="mx-1" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} width="25" /></IconButton>
         <Box onClick={openSidebar} ><img src={PieIcon} width="24" /></Box>
     </div>

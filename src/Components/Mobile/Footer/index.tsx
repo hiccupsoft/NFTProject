@@ -23,7 +23,7 @@ export const Index:React.FC<FooterProps> = (props: FooterProps) => {
             {props.showButton && <CustomButton ismobile={isMobile ? "true" : "false"} style={{ marginTop: '80px', marginBottom: 220 }} endIcon={<ArrowForwardIcon />} >
                 JOIN NOW
             </CustomButton>}
-            <Box className="mb-5" >©2021 CryptoWhales</Box>
+            <Box className="mb-5 m_cpwrite" >©2021 CryptoWhales</Box>
         </div>
     );
 }

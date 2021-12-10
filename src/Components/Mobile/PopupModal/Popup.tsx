@@ -88,11 +88,11 @@ export default function TransitionsModal(props: PopupProps) {
                     <Box sx={style} className="d-flex flex-row">
                         <Box sx={styleContent} className="py-3 pt-1 pb-3 d-flex flex-column align-items-center justify-content-between">
                             <Box className="d-flex flex-row justify-content-around align-items-center w-100">
-                                <Box className="walletTilte ms-5">Connect your wallet</Box>
+                                <Box className="m_walletTilte ms-5">Connect your wallet</Box>
                                 <IconButton onClick={handleClose} ><CancelRoundedIcon style={{color: 'black',fontSize: 60}} /></IconButton>
                             </Box>
  
-                            <Box className="text-center wallet_content_mobile">
+                            <Box className="m_text-center m_wallet_content_mobile">
                                 By connecting your wallet, you agree to our Terms of Service and our 
                                 <Box color="#1A5C6F" component="span">Privacy Policy</Box>.
                             </Box>

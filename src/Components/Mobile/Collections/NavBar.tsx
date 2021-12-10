@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { Button, ButtonGroup, Box } from '@mui/material';
 import React,{ useState } from 'react';
-import styles from './styles.module.scss';
+import './styles.scss';
 import _ from 'lodash'
 
 export enum CollectionsList {
@@ -28,7 +28,7 @@ export const NaveBar: React.FC<NaveBar> = (props:NaveBar) => {
 
     const renderNavBar = () => {
         return _.map(navList, (x, id)=>{
-            return <div className={(selItem===x.id?styles.sub_nav_bar_active:styles.sub_nav_bar_inactive)} 
+            return <div className={(selItem===x.id?'m_sub_nav_bar_active':"m_sub_nav_bar_inactive")} 
                             style={{color: 'white'}} 
                             key={id} 
                             onClick={clickList(x.id)}
@@ -37,9 +37,9 @@ export const NaveBar: React.FC<NaveBar> = (props:NaveBar) => {
             </div>
         })
     }
-    return (<ButtonGroup className={styles.sub_nav_bar + " py-2"} sx={{width: '100%'}}>
+    return (<ButtonGroup className={"m_sub_nav_bar py-2"} sx={{width: '100%'}}>
         <Box className={"d-flex flex-row justify-content-around align-items-center"} sx={{width: '100%'}}>
-            <Box className={styles.title1 + " d-flex flex-row justify-content-center align-items-center"} >Select <span className={styles.title2}>Type:</span></Box>
+            <Box className={"m_title1 d-flex flex-row justify-content-center align-items-center"} >Select <span className={"m_title2"}>Type:</span></Box>
             {renderNavBar()}
         </Box>
     </ButtonGroup>);

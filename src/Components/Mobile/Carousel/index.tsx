@@ -54,15 +54,15 @@ const Carousel:FC<CarouselProps> = (props: CarouselProps) => {
     }
 
     return (
-        <div className="carousel-container">
-            <div className="carousel-wrapper">
+        <div className="m_carousel-container">
+            <div className="m_carousel-wrapper">
                 <div
-                    className="carousel-content-wrapper"
+                    className="m_carousel-content-wrapper"
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                 >
                     <div
-                        className={`carousel-content show-2`}
+                        className={`m_carousel-content m_show-2`}
                         style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
                     > 
                         {children}

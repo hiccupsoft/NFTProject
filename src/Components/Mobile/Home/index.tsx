@@ -60,20 +60,20 @@ export const Index: React.FC = () => {
             delay: 100,
           })
     }
-    return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
-        <div className={styles.bg + " d-flex flex-column align-items-center justify-content-between"}>
-            <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="70%" />
-            <div className={styles.title}>
+    return (<div className={styles.m_main + " d-flex flex-column align-items-center justify-content-between"}>
+        <div className={styles.m_bg + " d-flex flex-column align-items-center justify-content-between"}>
+            <img src={!isDark ? bg_light : bg_dark} className={styles.m_bg_img} height="70%" />
+            <div className={styles.m_title}>
                 <div>
-                    <TextDecorator className={styles.title_first} mode={mode} >DIGITAL </TextDecorator>
-                    <TextDecorator className={styles.title_second} mode={mode}>CRYPTO WHALES</TextDecorator>
+                    <TextDecorator className={styles.m_title_first} mode={mode} >DIGITAL </TextDecorator>
+                    <TextDecorator className={styles.m_title_second} mode={mode}>CRYPTO WHALES</TextDecorator>
                 </div>
                 <div>
-                    <TextDecorator className={styles.title_first} mode={mode}>FOR </TextDecorator>
-                    <TextDecorator className={styles.title_second} mode={mode}>CRYPTO WHALES.</TextDecorator>
+                    <TextDecorator className={styles.m_title_first} mode={mode}>FOR </TextDecorator>
+                    <TextDecorator className={styles.m_title_second} mode={mode}>CRYPTO WHALES.</TextDecorator>
                 </div>
             </div>
-            <div className={styles.subtitle}>
+            <div className={styles.m_subtitle}>
                 <TextDecorator mode={mode}> Only the wealthiest whales can afford the most high end, exclusive Whale NFT’s.</TextDecorator>
             </div>
             <DiveButton ismobile={"true"} style={{ marginTop: '60px', fontSize: '15px' }} onClick={linkTo}>
@@ -81,13 +81,13 @@ export const Index: React.FC = () => {
             </DiveButton>
         </div>
 
-        <img src={Mark} className={styles.markIcon} width="50%" />
+        <img src={Mark} className={styles.m_markIcon} width="50%" />
 
         <Element name="myScrollToElement">
             <div className="d-flex flex-column align-items-center justify-content-center">
-            <div className={styles.collection}>
-                <div className={styles.collection_title_first}>THE </div>
-                <span className={styles.collection_title_second}><b>COLLECTIONS</b></span>
+            <div className={styles.m_collection}>
+                <div className={styles.m_collection_title_first}>THE </div>
+                <span className={styles.m_collection_title_second}><b>COLLECTIONS</b></span>
             </div>
 
             <Carousel>

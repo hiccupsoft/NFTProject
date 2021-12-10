@@ -1,13 +1,13 @@
-.navText:hover {
+.m_navText:hover {
     color: #16B4FF;
     cursor: pointer;
 }
-.navText {
+.m_navText {
     margin-left: 120px;
     font-size: 19px;
 }
 
-.connectBtn-dark-, .connectBtn-dark-transparent {
+.m_connectBtn-dark-, .m_connectBtn-dark-transparent {
     border: 1px solid #16B4FF !important;
     border-radius: 4px;
     padding: 10px 35px !important;
@@ -15,7 +15,7 @@
     color: white !important;
 }
 
-.connectBtn-light-, .connectBtn-light-transparent {
+.m_connectBtn-light-, .m_connectBtn-light-transparent {
     border: 1px solid #16B4FF !important;
     background-color: #16B4FF !important;
     border-radius: 4px;
@@ -24,12 +24,12 @@
     color: white !important;
 }
 
-.bg-light- {
+.m_bg-light- {
     background: #99D3E5 0% 0% no-repeat padding-box;
     position: relative;
 }
 
-.bg-dark- {
+.m_bg-dark- {
     background: #000009 0% 0% no-repeat padding-box;
     position: relative;
 }

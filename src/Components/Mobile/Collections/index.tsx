@@ -1,7 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import React, {useState, useEffect} from 'react';
 import { NaveBar } from './NavBar';
-import styles from './styles.module.scss';
+import './styles.scss';
 import { CollectionsList } from './NavBar'
 import {Collection, CollectionProps} from './Collection';
 
@@ -142,13 +142,13 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
         }
     }
 
-    return (<Box className={styles.sub_container}>
+    return (<Box className={"m_sub_container"}>
         <NaveBar onClick={clickedListItem} />
-        <Box className={styles.modeBtn + " d-flex flex-row"}>
-            <Box className={(grid===1 ? styles.modeBtnContainer_active : styles.modeBtnContainer) + " d-flex mx-2"} onClick={()=>setGrid(1)}><img src={sqare} /></Box>
-            <Box className={(grid===2 ? styles.modeBtnContainer_active : styles.modeBtnContainer) + " d-flex mx-2"} onClick={()=>setGrid(2)}><img src={quawts} /></Box>
+        <Box className={"m_modeBtn d-flex flex-row"}>
+            <Box className={(grid===1 ? "m_modeBtnContainer_active" : "m_modeBtnContainer") + " d-flex mx-2"} onClick={()=>setGrid(1)}><img src={sqare} /></Box>
+            <Box className={(grid===2 ? "m_modeBtnContainer_active" : "m_modeBtnContainer") + " d-flex mx-2"} onClick={()=>setGrid(2)}><img src={quawts} /></Box>
         </Box>
-        <Box className={styles.subTitle + ' d-flex flex-row justify-content-start align-items-center'}>
+        <Box className={"m_subTitle" + ' d-flex flex-row justify-content-start align-items-center'}>
             {renderSubTitle()}
         </Box>
         {/* {loadCollectionItems()} */}

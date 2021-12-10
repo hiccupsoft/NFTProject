@@ -28,7 +28,7 @@ export const Bg:React.FC = () => {
     }
 
     return (
-        <div className="background">
+        <div className="m_background">
             {renderBubbles()}
             {renderJellyFish()}
         </div>

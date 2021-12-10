@@ -2,7 +2,7 @@ import React from 'react';
 import { Topbar } from "../../../Components/Mobile/Topbar/Topbar"
 import { Index as About } from "../../../Components/Mobile/About"
 import {Index as Footer} from "../../../Components/Mobile/Footer"
-import styles from "./about.module.scss";
+import "./about.scss";
 
 import { useAppSelector } from '../../../app/hooks';
 import {
@@ -12,8 +12,8 @@ import {
 export const Index:React.FC = () => {
     const isDark = useAppSelector(getMode);
     return (
-        <div className={isDark ? styles.aboutContainerDark:styles.aboutContainer}>
-            {isDark && <div className={"dark_theme_bg"}>
+        <div className={isDark ? "m_about_containerDark":"m_about_container"}>
+            {isDark && <div className={"m_dark_theme_bg"}>
                 <Topbar mode="transparent"/>
                 <About />
             </div>}
@@ -22,7 +22,7 @@ export const Index:React.FC = () => {
                 <About />
             </>}
             <Footer showTitle={true} showButton={true} showIcons={true} >
-                <div className={"about_title"}>NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
+                <div className={"m_about_title"}>NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>
             </Footer>
         </div>
     );

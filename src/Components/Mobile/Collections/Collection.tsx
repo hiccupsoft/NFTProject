@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import styles from './styles.module.scss';
+import './styles.scss';
 import { Label, GetItButton, ItemTitle } from '../../CustomWidget';
 import { useAppSelector } from '../../../app/hooks';
 import {
@@ -22,7 +22,7 @@ export interface CollectionProps {
 
 export const BgImg = (props: any) => {
     const BgImg = props.bgSrc;
-    return BgImg ?  <img className={styles.fron_side} src={BgImg} width="100%" height="100%" style={props.style} /> : <Box className="flip_side" style={props.style} />
+    return BgImg ?  <img className={"m_fron_side"} src={BgImg} width="100%" height="100%" style={props.style} /> : <Box className="m_flip_side" style={props.style} />
 }
 
 export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => {
@@ -31,11 +31,11 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
     const renderInfoPage = () => {
         if(props.isSold) {
             return (<Box className={props.cell === 2 ? 'my-2':'my-4'} style={{marginRight: 'auto'}}>
-                <Box className={styles.sub_title_font} style={isDark?{color: 'white'}:{}}>Auction ended</Box>
+                <Box className={"m_sub_title_font"} style={isDark?{color: 'white'}:{}}>Auction ended</Box>
                 <table width="100%">
                     <tbody>
                         <tr>
-                            <td className={props.cell === 2 ? styles.main_info_font2 : styles.main_info_font} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</td>
+                            <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</td>
                         </tr>
                         <tr>
                             <td ></td>
@@ -45,24 +45,24 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
             </Box>)
         } else {
             return (<Box className={props.cell === 2 ? '':'my-1'} style={{marginRight: 'auto'}}>
-                <Box className={props.cell === 2 ? styles.sub_title_font : styles.sub_title_font2} style={isDark?{color: 'white'}:{}}>Auction ending in</Box>
+                <Box className={props.cell === 2 ? "m_sub_title_font" : "m_sub_title_font2"} style={isDark?{color: 'white'}:{}}>Auction ending in</Box>
                 <table width="60%">
                     <tr>
-                        <td className={props.cell === 2 ? styles.main_info_font2 : styles.main_info_font} style={isDark?{color: 'white'}:{}}>{props.hours}</td>
-                        <td className={props.cell === 2 ? styles.main_info_font2 : styles.main_info_font} style={isDark?{color: 'white'}:{}}>{props.min}</td>
-                        <td className={props.cell === 2 ? styles.main_info_font2 : styles.main_info_font} style={isDark?{color: 'white'}:{}}>{props.sec}</td>
+                        <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>{props.hours}</td>
+                        <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>{props.min}</td>
+                        <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>{props.sec}</td>
                     </tr>
                     <tr>
-                        <td className={props.cell === 2 ? styles.time_font2 : styles.time_font}>Hours</td>
-                        <td className={props.cell === 2 ? styles.time_font2 : styles.time_font} >Min</td>
-                        <td className={props.cell === 2 ? styles.time_font2 : styles.time_font}>Sec</td>
+                        <td className={props.cell === 2 ? "m_time_font2" : "m_time_font"}>Hours</td>
+                        <td className={props.cell === 2 ? "m_time_font2" : "m_time_font"} >Min</td>
+                        <td className={props.cell === 2 ? "m_time_font2" : "m_time_font"}>Sec</td>
                     </tr>
                 </table>
             </Box>)
         }
     }
 
-    return (<Box className={(!isDark?styles.collection_itm_container:styles.collection_itm_container_dark) + " my-4 d-flex flex-column justify-content-center align-items-center h-full"} style={props.style}>
+    return (<Box className={(!isDark?"m_collection_itm_container":"m_collection_itm_container_dark") + " my-4 d-flex flex-column justify-content-center align-items-center h-full"} style={props.style}>
         <ItemTitle isdark={isDark} cell={props.cell} >{props.title}</ItemTitle>
         <BgImg className={props.cell === 2 ? 'my-1':'my-2'} bgSrc={props.bgSrc} style={{position: 'relative'}}/>
         <Label cell={props.cell}>{props.price}</Label>
