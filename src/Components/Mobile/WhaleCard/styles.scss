@@ -2,6 +2,8 @@
     background: transparent linear-gradient(84deg, #003C58 0%, #001F2E 100%) 0% 0% no-repeat padding-box;
     padding: 50px 100px;
     width: 100%;
+    font-family: 'Avenir Next';
+    font-size: 22px;
 }
 
 .m_whalecard_container{
@@ -11,7 +13,7 @@
 .m_whale_btn {
     transform: matrix(-1, 0, 0, -1, 0, 0);
     background: transparent linear-gradient(180deg, #5FCCFF 0%, #16B4FF 100%) 0% 0% no-repeat padding-box;
-    // box-shadow: 0px -5px 6px #16B4FF;
+    box-shadow: 0px 0px 12px #16B4FF;
     border: 0;
     outline: none;
     width: 100%;
