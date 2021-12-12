@@ -70,6 +70,7 @@ export default function TransitionsModal(props: PopupProps) {
     React.useEffect(()=>{
         if(props.open && open !== props.open)
             setOpen(props.open)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.open])
 
     return (

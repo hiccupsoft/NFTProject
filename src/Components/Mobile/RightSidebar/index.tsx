@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Box } from '@mui/material'
 import {FC, useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'

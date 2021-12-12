@@ -1,7 +1,6 @@
 import { Avatar } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import React from 'react';
-import styles from './About.module.scss';
 
 const Item = styled(Avatar)({
     background: 'transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box',

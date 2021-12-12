@@ -2,7 +2,7 @@
 import React,{useState} from 'react';
 import "./styles.scss";
 import { Box, Button, Grid, styled, } from '@mui/material';
-import Mark from "../../../assests/images/markIcon.png";
+// import Mark from "../../../assests/images/markIcon.png";
 import Ether from "../../../assests/images/etherIcon.png";
 import Ship from "../../../assests/images/shipIcon.png";
 import Crypto from "../../../assests/images/cyptowhales.png";

@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-concat */
+/* eslint-disable jsx-a11y/alt-text */
 import { Box, Grid } from '@mui/material';
 import React, {useState, useEffect} from 'react';
 import { NaveBar } from './NavBar';
@@ -6,8 +8,8 @@ import { CollectionsList } from './NavBar'
 import {Collection, CollectionProps} from './Collection';
 
 import BWhale from "../../../assests/images/whale1.png";
-import PWhale from "../../../assests/images/whale2.png";
-import UnknowWhale from "../../../assests/images/whale3.png";
+// import PWhale from "../../../assests/images/whale2.png";
+// import UnknowWhale from "../../../assests/images/whale3.png";
 import sqare from "../../../assests/images/square.png";
 import quawts from "../../../assests/images/squares.png";
 import _ from 'lodash';
@@ -148,7 +150,7 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
             <Box className={(grid===1 ? "m_modeBtnContainer_active" : "m_modeBtnContainer") + " d-flex mx-2"} onClick={()=>setGrid(1)}><img src={sqare} /></Box>
             <Box className={(grid===2 ? "m_modeBtnContainer_active" : "m_modeBtnContainer") + " d-flex mx-2"} onClick={()=>setGrid(2)}><img src={quawts} /></Box>
         </Box>
-        <Box className={"m_subTitle" + ' d-flex flex-row justify-content-start align-items-center'}>
+        <Box className={'m_subTitle d-flex flex-row justify-content-start align-items-center'}>
             {renderSubTitle()}
         </Box>
         {/* {loadCollectionItems()} */}

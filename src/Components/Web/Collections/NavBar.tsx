@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { Button, ButtonGroup } from '@mui/material';
 import React,{ useState } from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Box } from '@mui/material';
 import React from 'react';
 import './styles.scss';

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import Ocean from "../../../assests/images/ocean-background.png";
+// import Ocean from "../../../assests/images/ocean-background.png";
 import jellyfish from "../../../assests/images/Jellyfish.png";
 import "./styles.scss";
 

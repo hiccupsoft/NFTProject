@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 import React from 'react';
 import { TextDecorator } from '../TextDecorator'
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import styles from './Home.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../../assests/images/mark.png";
