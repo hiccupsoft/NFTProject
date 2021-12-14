@@ -3,6 +3,7 @@ import React from 'react';
 import './About.scss';
 import { CircleItem } from './CircleItem';
 import Mark from "../../../assests/images/markIcon.png";
+import LazyShow from '../../Common/LazyShow';
 
 export const Index: React.FC = () => {
     return (<div className={"main d-flex flex-column align-items-center justify-content-between"}>
@@ -15,6 +16,7 @@ export const Index: React.FC = () => {
         <div className={"subtitle"}>
             THE <b>WHALEMAP 2021/ 2022</b>
         </div>
+        <LazyShow direction='top'>
         <CircleItem>Q4</CircleItem>
         <div className="subcontent d-flex flex-column align-items-center justify-content-center">
             <div>- Create branding CryptoWhales </div>
@@ -24,6 +26,8 @@ export const Index: React.FC = () => {
             <div> - CryptoWhale NFT giveaway</div>
             <div> - Launching the first Uncommen Whale collection</div>
         </div>
+        </LazyShow>
+        <LazyShow direction='top'>
         <CircleItem>Q1</CircleItem>
         <div className="subcontent d-flex flex-column align-items-center justify-content-center">
             <div>- Create branding CryptoWhales </div>
@@ -33,6 +37,8 @@ export const Index: React.FC = () => {
             <div> - CryptoWhale NFT giveaway</div>
             <div> - Launching the first Uncommen Whale collection</div>
         </div>
+        </LazyShow>
+        <LazyShow direction='top'>
         <CircleItem>Q2</CircleItem>
         <div className="subcontent d-flex flex-column align-items-center justify-content-center">
             <div>- Create branding CryptoWhales </div>
@@ -42,6 +48,7 @@ export const Index: React.FC = () => {
             <div> - CryptoWhale NFT giveaway</div>
             <div> - Launching the first Uncommen Whale collection</div>
         </div>
+        </LazyShow>
 
     </div>);
 }

@@ -31,23 +31,29 @@ export const Collection: React.FC<CollectionProps> = (props:CollectionProps) => 
     const isDark = useAppSelector(getMode);
     const renderInfoPage = () => {
         if(props.isSold) {
-            return (<Box className={props.cell === 2 ? 'my-2':'my-4'} style={{marginRight: 'auto'}}>
-                <Box className={"m_sub_title_font"} style={isDark?{color: 'white'}:{}}>Auction ended</Box>
-                <table width="100%">
+            return (<Box style={{marginRight: 'auto'}}>
+                <table width="100%" className={props.cell === 2 ? 'table-padding2':'table-padding'}>
                     <tbody>
                         <tr>
-                            <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</td>
+                            <td colSpan={3} className={"m_sub_title_font"} style={isDark?{color: 'white'}:{}}>Auction ended</td>
                         </tr>
                         <tr>
-                            <td ></td>
+                            <td colSpan={3} className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>Sold for {props.soldPrice}</td>
+                        </tr>
+                        <tr style={{visibility: 'hidden'}}>
+                            <td className={props.cell === 2 ? "m_time_font2" : "m_time_font"}>Hours</td>
+                            <td className={props.cell === 2 ? "m_time_font2" : "m_time_font"} >Min</td>
+                            <td className={props.cell === 2 ? "m_time_font2" : "m_time_font"}>Sec</td>
                         </tr>
                     </tbody>
                 </table>
             </Box>)
         } else {
-            return (<Box className={props.cell === 2 ? '':'my-1'} style={{marginRight: 'auto'}}>
-                <Box className={props.cell === 2 ? "m_sub_title_font" : "m_sub_title_font2"} style={isDark?{color: 'white'}:{}}>Auction ending in</Box>
-                <table width="60%">
+            return (<Box  style={{marginRight: 'auto'}}>
+                <table width="100%" className={props.cell === 2 ? 'table-padding2':'table-padding'}>
+                    <tr>
+                        <td colSpan={3} className={props.cell === 2 ? "m_sub_title_font" : "m_sub_title_font2"} style={isDark?{color: 'white'}:{}}>Auction ending in</td>
+                    </tr>
                     <tr>
                         <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>{props.hours}</td>
                         <td className={props.cell === 2 ? "m_main_info_font2" : "m_main_info_font"} style={isDark?{color: 'white'}:{}}>{props.min}</td>

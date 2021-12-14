@@ -38,7 +38,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const mode = isDark ? "dark-" + (props.mode || "") : "light-" + (props.mode || "");
 
     return (<div className={`px-4 py-3 d-flex align-items-center justify-content-between bg-${mode}`}>
-    <div className="d-flex align-items-center" style={{marginRight: 50}}>
+    <div className="d-flex align-items-center topbar_icon_container" style={{marginRight: 50}}>
         <IconButton className="ms-3" onClick={goTo("/", "")} ><img src={Mark} width='30' /></IconButton>
     </div>
     <div className="d-flex align-items-center justify-content-around w-100">

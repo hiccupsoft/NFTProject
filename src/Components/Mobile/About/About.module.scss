@@ -31,3 +31,19 @@
         font: normal normal 100 11px/20px Roboto;
     }
 }
+
+@media only screen and (max-width: 410px) {    
+    .m_subtitle{
+        letter-spacing: 1.8px !important;
+        text-shadow: 0px 3px 6px #00000029;
+        font: normal normal 100 16px/22px 'Roboto' !important;
+        b{
+            font: normal normal medium 16px/22px Avenir Next !important;
+        }
+    }
+    
+    .m_subcontent {
+        text-align: center;
+        font: normal normal 100 10px/18px Roboto;
+    }
+}

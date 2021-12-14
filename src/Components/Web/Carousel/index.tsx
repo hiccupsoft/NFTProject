@@ -30,7 +30,7 @@ const CustomCarouselContainer = styled((props: any) => (
         translateZ(calc(${props.abs} * -50rem))
         translateX(calc(${props.offset} / ${props.abs} * -15rem))`};
     transition: all 0.3s ease-out;
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1350px) {
       transform: ${(props)=>`rotateY(calc(${props.offset} * 50deg)) 
         scaleY(calc(1 + ${props.abs} * -0.6))
         translateZ(calc(${props.abs} * -30rem))

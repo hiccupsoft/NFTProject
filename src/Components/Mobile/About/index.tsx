@@ -9,6 +9,9 @@ import {
 } from '../../../actions/ToggleMode';
 import bg_light from "../../../assests/images/ocean-background.png";
 import bg_dark from "../../../assests/images/ocean-background-dark.png";
+import LazyShow from '../../Common/LazyShow';
+// import ScrollAnimation from 'react-animate-on-scroll';
+// import "animate.css/animate.min.css";
 
 export const Index: React.FC = () => {
 
@@ -25,6 +28,7 @@ export const Index: React.FC = () => {
         <div className={styles.m_subtitle}>
             THE <b>WHALEMAP 2021/ 2022</b>
         </div>
+        <LazyShow direction='top'>
         <CircleItem>Q4</CircleItem>
         <div className={styles.m_subcontent + " d-flex flex-column align-items-center justify-content-center"}>
             <div>- Create branding CryptoWhales </div>
@@ -34,6 +38,8 @@ export const Index: React.FC = () => {
             <div> - </div>
             <div> - </div>
         </div>
+        </LazyShow>
+        <LazyShow direction='top'>
         <CircleItem>Q1</CircleItem>
         <div className={styles.m_subcontent + " d-flex flex-column align-items-center justify-content-center"}>
             <div>- Create branding CryptoWhales </div>
@@ -43,6 +49,8 @@ export const Index: React.FC = () => {
             <div> - </div>
             <div> - </div>
         </div>
+        </LazyShow>
+        <LazyShow direction='top'>
         <CircleItem>Q2</CircleItem>
         <div className={styles.m_subcontent + " d-flex flex-column align-items-center justify-content-center"}>
             <div>- Create branding CryptoWhales </div>
@@ -52,6 +60,6 @@ export const Index: React.FC = () => {
             <div> - CryptoWhale NFT giveaway</div>
             <div> - Launching the first Uncommen Whale collection</div>
         </div>
-
+        </LazyShow>
     </div>);
 }

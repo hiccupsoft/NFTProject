@@ -106,7 +106,7 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
     }
 
     const renderCollectionContainer = () => {
-        return <Grid container className={"px-4"} style={grid === 2 ? {}: {margin: '30px 70px'}} spacing={grid === 2 ? 2:0}>
+        return <Grid container className={"px-4"} spacing={grid === 2 ? 2:0}>
             {
                 _.map(itmList, (itm, key)=>{
                     return <Grid item xs={12 /grid} key={key}>
@@ -154,7 +154,7 @@ export const Index: React.FC<CollectionsProps> = (props:CollectionsProps) => {
             {renderSubTitle()}
         </Box>
         {/* {loadCollectionItems()} */}
-        <Box className={"d-flex flex-row"} style={{marginTop: '50px'}}>
+        <Box className={"d-flex flex-row"} style={{marginTop: '10px'}}>
             {renderCollectionContainer()}
         </Box>
     </Box>);

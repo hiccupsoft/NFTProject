@@ -91,11 +91,18 @@ export const Label = styled((props: any)=>(<Paper {...props} />))`
     text-align: center;
     background:  #0C0121 0% 0% no-repeat padding-box;
     color: #FFFFFF;
-    font: normal normal normal 14px/26px Avenir;
+    font: Avenir;
+    font-size: ${(props)=>props.cell===2 ? `10px` : '20px'};
     position: absolute;
     padding: ${(props)=>props.cell===2 ? `1px 5px` : '2px 10px'};
-    top: ${(props)=>props.cell===2 ? `70px` : '125px'};
-    right: ${(props)=>props.cell===2 ? `30px` : '40px'};
+    top: ${(props)=>props.cell===2 ? `70px` : '115px'};
+    right: ${(props)=>props.cell===2 ? `40px` : '50px'};
+    @media only screen and (max-width: 450px) {
+        font-size: ${(props)=>props.cell===2 ? `8px` : '14px'};
+        padding: ${(props)=>props.cell===2 ? `1px 5px` : '2px 10px'};
+        top: ${(props)=>props.cell===2 ? `45px` : '70px'};
+        right: ${(props)=>props.cell===2 ? `20px` : '30px'};
+    }
  `
 
 export const GetItButton = styled((props: any)=>(<button {...props} />))`
@@ -108,6 +115,12 @@ export const GetItButton = styled((props: any)=>(<button {...props} />))`
     font: normal normal 900 15px/20px Avenir;
     color: ${(props)=>props.isdark?'white':'#003C58'};
     letter-spacing: ${(props)=>props.cell ? `${4/props.cell}px` : '4px'};
+    @media only screen and (max-width: 450px) {
+        border-radius: ${(props)=>props.cell ? `${5/props.cell}px  !important` : '5px !important'};
+        padding: ${(props)=>props.cell ? `${10/props.cell}px  !important` : '10px !important'};
+        font: normal normal 900 12px Avenir;
+        letter-spacing: ${(props)=>props.cell ? `${2/props.cell}px` : '2px'};
+    }
 `
 
 export const ItemTitle = styled((props: any)=>(<Box {...props} />))`
@@ -116,9 +129,14 @@ export const ItemTitle = styled((props: any)=>(<Box {...props} />))`
     padding: ${(props)=>props.cell ? `${20/props.cell}px` : '20px'};
     width: 100%;
     font: normal normal 900 15px/20px Avenir;
-    font-size: ${(props)=>props.cell ? `${26/props.cell}px` : '30px'};
+    font-size: ${(props)=>props.cell ? `${26/props.cell}px` : '26px'};
     color: ${(props)=>props.isdark?'white':'#003C58'};
-    text-align: center
+    text-align: center;
+    @media only screen and (max-width: 450px) {
+        padding: ${(props)=>props.cell ? `${10/props.cell}px` : '10px'};
+        font: normal normal 900 Avenir;
+        font-size: ${(props)=>props.cell ? `${20/props.cell}px` : '20px'};
+    }
 `
 
 export const MenuButton = styled((props: any)=>(<Button {...props} />))`

@@ -37,7 +37,7 @@ export const NaveBar: React.FC<NaveBar> = (props:NaveBar) => {
             </div>
         })
     }
-    return (<ButtonGroup className={"m_sub_nav_bar py-2"} sx={{width: '100%'}}>
+    return (<ButtonGroup className={"m_sub_nav_bar"} sx={{width: '100%'}}>
         <Box className={"d-flex flex-row justify-content-around align-items-center"} sx={{width: '100%'}}>
             <Box className={"m_title1 d-flex flex-row justify-content-center align-items-center"} >Select <span className={"m_title2"}>Type:</span></Box>
             {renderNavBar()}
