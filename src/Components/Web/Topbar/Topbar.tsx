@@ -54,7 +54,6 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     }
 
     const getAddress = () => {
-        console.log(account)
         return account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : "Connect wallet"
     }
     return (<div className="ps-4 pe-5 pt-4 d-flex align-items-center justify-content-between">

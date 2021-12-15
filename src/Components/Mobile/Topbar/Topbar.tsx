@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../../assests/images/markIcon.png";
 import Dark from "../../../assests/images/Dark-toggle-icon.png";
@@ -56,8 +56,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
         <IconButton className="ms-3" onClick={goTo("/", "")} ><img src={Mark} width='30' /></IconButton>
     </div>
     <div className="d-flex align-items-center justify-content-around w-100">
-
-        <Button className={`m_connectBtn-${mode}`} onClick={ !account ? connectWallet:disconnectWallet} sx={{textTransform: 'none'}} >{getAddress()}</Button>
+        <Button className={`m_connectBtn-${mode}`} onClick={ !account ? connectWallet:disconnectWallet} sx={{textTransform: 'none'}} ><span>{getAddress()}</span></Button>
         <IconButton className="mx-1" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} width="25" /></IconButton>
         <Box onClick={openSidebar} ><img src={PieIcon} width="24" /></Box>
     </div>

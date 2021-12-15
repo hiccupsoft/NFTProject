@@ -77,11 +77,14 @@ export default function WalletModal(props: PopupProps) {
 
     const clickMetaMask = (connectId: ConnectorNames) =>()=> {
         connectMetaMask(connectId)
+        setOpen(false);
+        props.onClose();
     }
 
     React.useEffect(()=>{
         if(props.open && open !== props.open)
             setOpen(props.open)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.open])
 
     return (

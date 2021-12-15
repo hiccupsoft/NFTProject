@@ -13,8 +13,6 @@ import "./styles.scss"
 import { ConnectorNames } from '../../../types';
 import useConnectWallet from "../../../hooks/useConnectWallet"
 import { connections } from '../../../hooks/entry';
-import { useWeb3React } from '@web3-react/core';
-import { useEffect } from 'react';
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -67,12 +65,7 @@ const WalletButton = styled(Button)({
 export default function WalletModal(props: PopupProps) {
     const [open, setOpen] = React.useState(false);
     const {connectMetaMask} = useConnectWallet();
-    const { account } = useWeb3React()
-    useEffect(()=>{
-        if(account) {
-            setOpen(false)
-        }
-    }, [account])
+
     // const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
@@ -81,6 +74,8 @@ export default function WalletModal(props: PopupProps) {
 
     const clickMetaMask = (connectId: ConnectorNames) =>()=> {
         connectMetaMask(connectId)
+        setOpen(false);
+        props.onClose();
     }
 
     React.useEffect(()=>{
