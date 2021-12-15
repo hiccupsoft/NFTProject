@@ -13,7 +13,7 @@ export const Index:React.FC = () => {
     const isDark = useAppSelector(getMode);
     return (
         <div className={isDark ? "m_about_containerDark":"m_about_container"}>
-            {isDark && <div className={"m_dark_theme_bg"}>
+            {isDark && <div className={"m_dark_theme_about_bg"}>
                 <Topbar mode="transparent"/>
                 <About />
             </div>}
