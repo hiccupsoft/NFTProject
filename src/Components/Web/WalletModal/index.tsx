@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
@@ -6,11 +5,14 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
-import { IconButton, styled } from '@mui/material';
+import { Grid, IconButton, styled } from '@mui/material';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import Metamask from "../../../assests/images/Metamask-logo.png";
 import Wallet from "../../../assests/images/walletconnect-logo.png";
 import "./styles.scss"
+import { ConnectorNames } from '../../../types';
+import useConnectWallet from "../../../hooks/useConnectWallet"
+import { connections } from '../../../hooks/entry';
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -21,11 +23,16 @@ const style = {
 };
 
 const styleContent = {
-    width: 407,
-    height: 361,
+    width: 479,
+    height: 465,
     backgroundColor: 'white',
     boxShadow: '0px 0px 12px #0000001A',
     borderRadius: 13,
+}
+
+const closeBtn = {
+    left: -48,
+    top: 32
 }
 
 interface PopupProps {
@@ -42,7 +49,6 @@ const MetamaskButton = styled(Button)({
     justifyContent: 'space-between',
     color: 'white',
     textTransform: 'none',
-    font: 'normal normal medium 26px/31px Mosk',
 });
 
 const WalletButton = styled(Button)({
@@ -54,20 +60,25 @@ const WalletButton = styled(Button)({
     justifyContent: 'space-between',
     color: 'white',
     textTransform: 'none',
-    font: 'normal normal medium 26px/31px Mosk',
 });
 
-export default function TransitionsModal(props: PopupProps) {
+export default function WalletModal(props: PopupProps) {
     const [open, setOpen] = React.useState(false);
+    const {connectMetaMask} = useConnectWallet();
     // const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
         props.onClose();
     }
 
+    const clickMetaMask = (connectId: ConnectorNames) =>()=> {
+        connectMetaMask(connectId)
+    }
+
     React.useEffect(()=>{
         if(props.open && open !== props.open)
             setOpen(props.open)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.open])
 
     return (
@@ -87,19 +98,25 @@ export default function TransitionsModal(props: PopupProps) {
         >
             <Fade in={open}>
                     <Box sx={style} className="d-flex flex-row">
-                        <Box sx={styleContent} className="py-3 pt-1 pb-3 d-flex flex-column align-items-center justify-content-between">
-                            <Box className="d-flex flex-row justify-content-around align-items-center w-100">
-                                <Box className="m_walletTilte ms-5">Connect your wallet</Box>
-                                <IconButton onClick={handleClose} ><CancelRoundedIcon style={{color: 'black',fontSize: 60}} /></IconButton>
-                            </Box>
- 
-                            <Box className="m_text-center m_wallet_content_mobile">
-                                By connecting your wallet, you agree to our Terms of Service and our 
-                                <Box color="#1A5C6F" component="span">Privacy Policy</Box>.
-                            </Box>
-                            <MetamaskButton className="px-4" endIcon={<img src={Metamask} width='40' />} >MetaMask</MetamaskButton>
-                            <WalletButton  className="px-4" endIcon={<img src={Wallet} width='40' />} >MetaMask</WalletButton>
-                        </Box> 
+                        <Grid container>
+                            <Grid item xs={11} />
+                            <Grid item xs={1} >
+                                <IconButton onClick={handleClose} sx={closeBtn}><CancelRoundedIcon style={{color:'black', fontSize: 60}} /></IconButton>
+                            </Grid>
+                            <Grid item xs={11}>
+                                <Box sx={styleContent} className="py-5 ps-3 d-flex flex-column align-items-center justify-content-between">
+                                    <h2>Connect your wallet</h2>
+                                    <Box className="text-center wallet_content">
+                                        By connecting your wallet, you agree to our Terms of Service and our 
+                                        <Box color="#1A5C6F" component="span">Privacy Policy</Box>.
+                                    </Box>
+                                    <MetamaskButton onClick={clickMetaMask(connections[0].connectorId)} className="px-5" endIcon={<img src={Metamask} width='40' />} >MetaMask</MetamaskButton>
+                                    <WalletButton onClick={clickMetaMask(connections[1].connectorId)}  className="px-5" endIcon={<img src={Wallet} width='40' />} >MetaMask</WalletButton>
+                                </Box> 
+                            </Grid>
+                            <Grid item xs={1} />
+                        </Grid>
+                        
                         
                     </Box>
             </Fade>

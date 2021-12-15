@@ -10,7 +10,7 @@ import { TextDecorator } from '../TextDecorator'
 import { Button, IconButton } from '@mui/material';
 import {Routes} from "../../../Routes";
 import _ from 'lodash'
-import Popup from "../PopupModal/Popup"
+import WalletModal from "../WalletModal"
 import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 import {
     setDark,
@@ -18,6 +18,7 @@ import {
     setCurrentTitle,
     getCurrentTitle,
 } from '../../../actions/ToggleMode';
+import { useWeb3React } from '@web3-react/core';
 
 interface TobarProps{
     mode?: string;
@@ -27,10 +28,12 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const navigate = useNavigate();
     const isDark = useAppSelector(getMode);
     const dispatch = useAppDispatch();
+    const { account } = useWeb3React()
     const goTo = (url:string, title: string) => () => {
         dispatch(setCurrentTitle(title));
         navigate(url);
     }
+
     const [openModal, setOpenModal] = useState(false);
     const mode = props.mode ? props.mode : "light";
     const renderNavBar = () => {
@@ -41,6 +44,18 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
             </TextDecorator>
         })
     }
+
+    const connectWallet = () => {
+        setOpenModal(true)
+    }
+
+    const disconnectWallet = () => {
+
+    }
+
+    const getAddress = () => {
+        return account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : "Connect wallet"
+    }
     return (<div className="ps-4 pe-5 pt-4 d-flex align-items-center justify-content-between">
     <div className="d-flex align-items-center">
         <IconButton className="ms-3" onClick={goTo("/", "")} ><img src={Mark} width='45' /></IconButton>
@@ -48,8 +63,8 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     </div>
     <div className="d-flex align-items-center">
         <IconButton className="mx-5" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} /></IconButton>
-        <Button className={styles.connectBtn} onClick={()=>setOpenModal(true)} sx={{textTransform: 'none', letterSpacing: 2}} ><TextDecorator mode={mode}>Connect wallet</TextDecorator></Button>
+        <Button className={styles.connectBtn}onClick={ account ? connectWallet:disconnectWallet} sx={{textTransform: 'none', letterSpacing: 2}} ><TextDecorator mode={mode}>{getAddress()}</TextDecorator></Button>
     </div>
-    <Popup open={openModal} onClose={()=>setOpenModal(false)} />
+    <WalletModal open={openModal} onClose={()=>setOpenModal(false)} />
 </div>);
 }
