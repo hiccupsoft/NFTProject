@@ -26,7 +26,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     const navigate = useNavigate();
     const isDark = useAppSelector(getMode);
     const dispatch = useAppDispatch();
-    const { account } = useWeb3React();
+    const { account, deactivate } = useWeb3React();
     const goTo = (url:string, title: string) => () => {
         dispatch(setCurrentTitle(title));
         navigate(url);
@@ -46,7 +46,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     }
 
     const disconnectWallet = () => {
-
+        deactivate()
     }
 
     const mode = isDark ? "dark-" + (props.mode || "") : "light-" + (props.mode || "");
