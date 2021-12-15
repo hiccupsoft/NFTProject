@@ -45,16 +45,26 @@
     .m_markIcon{
         margin-top: 550px;
     }
-    .m_bg {
+    .m_bg_img {
         padding-top: 94px;
         width: 100%;
         background-size: cover;
         background-size: 100% 100%;
         position: relative;
-    }
-    .m_bg_img {
+        transform: translateY(91%);
+        height: 8%;
         position: absolute;
-        width: 100%;
-        top: 320px;
     }
+    // .m_bg_img {
+    //     position: absolute;
+    //     width: 100%;
+    //     top: 320px;
+    // }
 }
+
+// @media only screen and (max-width: 500px) {
+//     .m_bg_img {
+//         transform: translateY(91%);
+//         height: 8%;
+//     }
+// }

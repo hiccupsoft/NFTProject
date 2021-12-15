@@ -18,8 +18,9 @@ import _ from 'lodash';
 import BWhale from "../../../assests/images/whale1.png";
 import PWhale from "../../../assests/images/whale2.png";
 import UnknowWhale from "../../../assests/images/whale3.png";
-import bg_light from "../../../assests/images/ocean-background.png";
-import bg_dark from "../../../assests/images/ocean-background-dark.png";
+// import bg_light from "../../../assests/images/ocean-background.png";
+// import bg_dark from "../../../assests/images/ocean-background-dark.png";
+import cloud from "../../../assests/images/cloud.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
 
 export const Index: React.FC = () => {
@@ -38,7 +39,8 @@ export const Index: React.FC = () => {
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.bg + " d-flex flex-column align-items-center justify-content-between"}>
-            <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="100%" />
+            {/* <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="100%" /> */}
+            {!isDark && <img src={cloud} className={styles.bg_img} />}
             <div className={styles.title}>
                 <div>
                     <TextDecorator className={styles.title_first} mode={mode} >DIGITAL </TextDecorator>

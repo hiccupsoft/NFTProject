@@ -52,15 +52,19 @@
     }
     .bg {
         padding-top: 94px;
-        padding-bottom: 513px;
         width: 100%;
         background-size: cover;
         background-size: 100% 100%;
         position: relative;
     }
     .bg_img {
-        position: absolute;
+        padding-top: 94px;
         width: 100%;
-        top: 142px;
+        background-size: cover;
+        background-size: 100% 100%;
+        position: relative;
+        transform: translateY(10%);
+        height: 45%;
+        position: absolute;
     }
 }

@@ -16,7 +16,7 @@
     width: 10px;
     height: 10px;
     background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+    opacity: 0.34;
     border-radius: 50%;
     z-index: 10;
 }
@@ -28,7 +28,7 @@
     width: 34px;
     height: 34px;
     background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+    opacity: 0.22;
     border-radius: 50%;
     z-index: 10;
 }
@@ -40,7 +40,7 @@
     width: 14px;
     height: 14px;
     background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+    opacity: 0.5;
     border-radius: 50%;
     z-index: 10;
 }
@@ -52,19 +52,19 @@
     width: 10px;
     height: 10px;
     background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+    opacity: 0.3;
     border-radius: 50%;
     z-index: 10;
 }
 
 .m_small-5 {
     position: absolute;
-    top: 20%;
-    left: 25%;
+    top: 30%;
+    left: 15%;
     width: 11px;
     height: 11px;
     background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+    opacity: 0.4;
     border-radius: 50%;
     z-index: 10;
 }
@@ -115,7 +115,7 @@
     width: 29px;
     height: 29px;
     background: transparent radial-gradient(closest-side at 50% 50%, #003C58 0%, #005A84 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
+    opacity: 0.7;
     border-radius: 50%;
     z-index: 10;
 }
@@ -131,7 +131,6 @@
 
 .m_jellyfish-1{
     position: absolute;
-    top: 30%;
     left: 56%;
     width: 51px !important;
     height: 106px;
@@ -148,13 +147,13 @@
         from {
             width: 51px;
             height: 106px;
-            top: 30%;
+            top: 27%;
         }
       
         to {
             width: 61px;
             height: 116px;
-            top: calc(30% + 10px);
+            top: calc(27% + 10px);
         }
     }
 }

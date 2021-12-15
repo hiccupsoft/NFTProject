@@ -17,8 +17,9 @@ import _ from 'lodash';
 // import BWhale from "../../../assests/images/whale1.png";
 // import PWhale from "../../../assests/images/whale2.png";
 import UnknowWhale from "../../../assests/images/whale4.png";
-import bg_light from "../../../assests/images/ocean-background.png";
-import bg_dark from "../../../assests/images/ocean-background-dark.png";
+// import bg_light from "../../../assests/images/ocean-background.png";
+// import bg_dark from "../../../assests/images/ocean-background-dark.png";
+import cloud from "../../../assests/images/cloud.png";
 import { CustomButton2, DiveButton } from '../../CustomWidget';
 import { WhaleCard } from '../WhaleCard';
 
@@ -63,7 +64,7 @@ export const Index: React.FC = () => {
     }
     return (<div className={styles.m_main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.m_bg + " d-flex flex-column align-items-center justify-content-between"}>
-            <img src={!isDark ? bg_light : bg_dark} className={styles.m_bg_img} height="80%" />
+            {!isDark && <img src={cloud} className={styles.m_bg_img} />}
             <div className={styles.m_title}>
                 <div>
                     <TextDecorator className={styles.m_title_first} mode={mode} >DIGITAL </TextDecorator>
