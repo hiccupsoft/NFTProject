@@ -57,7 +57,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     </div>
     <div className="d-flex align-items-center justify-content-around w-100">
 
-        <Button className={`m_connectBtn-${mode}`} onClick={ account ? connectWallet:disconnectWallet} sx={{textTransform: 'none'}} >{getAddress()}</Button>
+        <Button className={`m_connectBtn-${mode}`} onClick={ !account ? connectWallet:disconnectWallet} sx={{textTransform: 'none'}} >{getAddress()}</Button>
         <IconButton className="mx-1" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} width="25" /></IconButton>
         <Box onClick={openSidebar} ><img src={PieIcon} width="24" /></Box>
     </div>

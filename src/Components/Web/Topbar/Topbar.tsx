@@ -54,6 +54,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     }
 
     const getAddress = () => {
+        console.log(account)
         return account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : "Connect wallet"
     }
     return (<div className="ps-4 pe-5 pt-4 d-flex align-items-center justify-content-between">
@@ -63,7 +64,7 @@ export const Topbar:React.FC<TobarProps> = (props:TobarProps) => {
     </div>
     <div className="d-flex align-items-center">
         <IconButton className="mx-5" onClick={()=>dispatch(setDark())}><img src={isDark?Light:Dark} /></IconButton>
-        <Button className={styles.connectBtn}onClick={ account ? connectWallet:disconnectWallet} sx={{textTransform: 'none', letterSpacing: 2}} ><TextDecorator mode={mode}>{getAddress()}</TextDecorator></Button>
+        <Button className={styles.connectBtn}onClick={ !account ? connectWallet:disconnectWallet} sx={{textTransform: 'none', letterSpacing: 2}} ><TextDecorator mode={mode}>{getAddress()}</TextDecorator></Button>
     </div>
     <WalletModal open={openModal} onClose={()=>setOpenModal(false)} />
 </div>);
