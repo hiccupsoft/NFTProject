@@ -10,7 +10,6 @@ interface props{
 const SmoothScroll:FC<props> = ({ children }) => {
   // 1.
   const windowSize = useWindowSize();
-
   //2.
   const scrollingContainerRef = useRef<any>();
 
@@ -29,6 +28,7 @@ const SmoothScroll:FC<props> = ({ children }) => {
 
   const setBodyHeight = () => {
     document.body.style.height = `${
+      // scrollingContainerRef.current?.offsetHeight
       scrollingContainerRef.current?.getBoundingClientRect().height
     }px`;
   };
@@ -36,6 +36,7 @@ const SmoothScroll:FC<props> = ({ children }) => {
   // 5.
   useEffect(() => {
     requestAnimationFrame(() => smoothScrollingHandler());
+    setTimeout(()=>{window.dispatchEvent(new Event('resize')); }, 1000)
   }, []);
 
   const smoothScrollingHandler = () => {
