@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../app/store';
+import { createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../app/store';
 
 export interface ModeState {
     isDark: boolean;
@@ -8,7 +8,7 @@ export interface ModeState {
 
 const initialState: ModeState = {
   isDark: false,
-  currentTitle: '',
+  currentTitle: 'Home',
 };
 
 
