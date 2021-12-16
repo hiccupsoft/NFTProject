@@ -1,15 +1,79 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import jellyfish from "../../assests/images/Jellyfish.png";
 import "./style.scss";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-export const Bg:React.FC = () => {
+export const Bg: React.FC = () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+    const ref = useRef<any>(null);
+    useEffect(() => {
+        const element = ref.current;
+        if (!element) return;
+        gsap.fromTo(
+            element.querySelector(".m_jellyfish-1"),
+            {
+                y: 600
+            },
+            {
+                y: 0,
+                duration: 0.7,
+                ease: "power4",
+                scrollTrigger: {
+                    trigger: element.querySelector(".m_small-9"),
+                    start: "-150 40%",
+                    end: "+=100",
+                    scrub: true,
+                }
+            }
+        );
+    }, []);
+    useEffect(() => {
+        const element = ref.current;
+        if (!element) return;
+        gsap.fromTo(
+            element.querySelector(".m_jellyfish-2"),
+            {
+                y: 300
+            },
+            {
+                y: 0,
+                duration: 0.9,
+                ease: "power4",
+                scrollTrigger: {
+                    trigger: element.querySelector(".m_small-2"),
+                    start: "-150 40%",
+                    end: "+=200",
+                    scrub: true,
+                }
+            }
+        );
+    }, []);
+
+    useEffect(() => {
+        const element = ref.current;
+        if (!element) return;
+        gsap.fromTo(element.querySelector(".m_jellyfish-3"), {
+            y: 300
+        }, {
+            y: 0,
+            ease: "power4",
+            scrollTrigger: {
+                trigger: element.querySelector(".m_small-8"),
+                scrub: true,
+                start: "-150 60%",
+                end: "+=200",
+            }
+        });
+    }, []);
 
     const renderJellyFish = () => {
         return <>
-            <img src={jellyfish} className="m_jellyfish-1"/>
-            <img src={jellyfish} className="m_jellyfish-2"/>
-            <img src={jellyfish} className="m_jellyfish-3"/>
+            <img src={jellyfish} className="m_jellyfish-1" />
+            <img src={jellyfish} className="m_jellyfish-2" />
+            <img src={jellyfish} className="m_jellyfish-3" />
         </>
     }
 
@@ -28,7 +92,7 @@ export const Bg:React.FC = () => {
     }
 
     return (
-        <div className="m_background">
+        <div className="m_background scroll-triger" ref={ref}>
             {renderBubbles()}
             {renderJellyFish()}
         </div>
