@@ -24,7 +24,7 @@ export const Bg:React.FC = () => {
                 scrollTrigger: {
                     trigger: element.querySelector(".small-1"),
                     start: "0 30%",
-                    end: "+=100",
+                    end: "+=300",
                     scrub: true,
                 }
             }
@@ -65,7 +65,7 @@ export const Bg:React.FC = () => {
                 trigger: element.querySelector(".small-7"),
                 scrub: true,
                 start: "200 40%",
-                end: "+=100",
+                end: "+=200",
             }
         });
     }, []);

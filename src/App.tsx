@@ -6,26 +6,29 @@ import _ from 'lodash'
 import useMobile from './hooks/useMobile';
 import { Web3ReactProvider } from '@web3-react/core'
 import { getLibrary } from './utils/web3React'
+import SmoothScroll from './Components/Common/SmoothScroll';
 
 const App: React.FC = () => {
-  const {isMobile} = useMobile();
+  const { isMobile } = useMobile();
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <BrowserRouter>
-        <Routes>
-          { !isMobile &&
-            _.map(Router.webRoute, (each, index)=>{
-              const Component: any = each.Component;
-              return <Route path={each.path} element={<Component />} key={index} />
-            })
-          }
-          { isMobile &&
-            _.map(Router.mobileRoute, (each, index)=>{
-              const Component: any = each.Component;
-              return <Route path={each.path} element={<Component />} key={index} />
-            })
-          }
-        </Routes>
+        <SmoothScroll>
+          <Routes>
+            {!isMobile &&
+              _.map(Router.webRoute, (each, index) => {
+                const Component: any = each.Component;
+                return <Route path={each.path} element={<Component />} key={index} />
+              })
+            }
+            {isMobile &&
+              _.map(Router.mobileRoute, (each, index) => {
+                const Component: any = each.Component;
+                return <Route path={each.path} element={<Component />} key={index} />
+              })
+            }
+          </Routes>
+        </SmoothScroll>
       </BrowserRouter>
     </Web3ReactProvider>
   )

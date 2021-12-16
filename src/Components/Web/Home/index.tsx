@@ -33,8 +33,8 @@ export const Index: React.FC = () => {
     const mode = isDark?"dark":"light";
     const linkTo = () => {
         scroller.scrollTo('myScrollToElement', {
-            duration: 1000,
-            delay: 100,
+            duration: 4000,
+            delay: 10000,
           })
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
