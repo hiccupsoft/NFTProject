@@ -23,7 +23,7 @@ const style = {
     
 };
 
-declare let window: any;
+// declare let window: any;
 
 interface PopupProps {
     open: boolean;
