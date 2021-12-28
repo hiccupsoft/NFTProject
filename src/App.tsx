@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <BrowserRouter>
-        <SmoothScroll>
+        {/* <SmoothScroll> */}
           <Routes>
             {!isMobile &&
               _.map(Router.webRoute, (each, index) => {
@@ -28,7 +28,7 @@ const App: React.FC = () => {
               })
             }
           </Routes>
-        </SmoothScroll>
+        {/* </SmoothScroll> */}
       </BrowserRouter>
     </Web3ReactProvider>
   )
