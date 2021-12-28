@@ -6,7 +6,7 @@ import _ from 'lodash'
 import useMobile from './hooks/useMobile';
 import { Web3ReactProvider } from '@web3-react/core'
 import { getLibrary } from './utils/web3React'
-import SmoothScroll from './Components/Common/SmoothScroll';
+// import SmoothScroll from './Components/Common/SmoothScroll';
 
 const App: React.FC = () => {
   const { isMobile } = useMobile();
