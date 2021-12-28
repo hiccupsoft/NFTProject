@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { FC, useEffect, useRef } from "react";
 
 import "./styles.scss";
@@ -28,8 +29,8 @@ const SmoothScroll:FC<props> = ({ children }) => {
 
   const setBodyHeight = () => {
     document.body.style.height = `${
-      // scrollingContainerRef.current?.offsetHeight
-      scrollingContainerRef.current?.getBoundingClientRect().height
+      scrollingContainerRef.current?.offsetHeight
+      // scrollingContainerRef.current?.getBoundingClientRect().height
     }px`;
   };
 
