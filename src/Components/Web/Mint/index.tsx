@@ -61,7 +61,7 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
     return (
         <Grid container className="mint_main" >
             <Grid item xs={1} />
-            <Grid item xs={4}>
+            <Grid item xs={4} style={{zIndex: 10}}>
                 <Box className="d-flex flex-column align-items-center justify-content-center l_container" color="white">
                     <Box className="mint_title">Mint your own</Box>
                     <div className="d-flex flex-row align-items-center" style={{marginTop: '-20px'}}>
@@ -117,7 +117,7 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                 </Box>
             </Grid>
             <Grid item xs={2} />
-            <Grid item xs={4}>
+            <Grid item xs={4} style={{zIndex: 10}}>
                 <Box className="d-flex flex-column align-items-start justify-content-center r_container" color="white">
                     <Box className="r_title">About</Box>
                     <Box className="r_container mb-3">

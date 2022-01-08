@@ -14,17 +14,18 @@ export const Bg:React.FC = () => {
     }
 
     const renderBubbles = () => {
-        return <>
-            <div className="small-mint-1"></div>
-            <div className="small-mint-2"></div>
-            <div className="small-mint-3"></div>
-            <div className="small-mint-4"></div>
-            <div className="small-mint-5"></div>
-            <div className="small-mint-6"></div>
-            <div className="small-mint-7"></div>
-            <div className="small-mint-8"></div>
-            <div className="small-mint-9"></div>
-        </>
+        return <div id="mint-background-wrap">
+        <div className="bubble x1"></div>
+        <div className="bubble x2"></div>
+        <div className="bubble x3"></div>
+        <div className="bubble x4"></div>
+        <div className="bubble x5"></div>
+        <div className="bubble x6"></div>
+        <div className="bubble x7"></div>
+        <div className="bubble x8"></div>
+        <div className="bubble x9"></div>
+        <div className="bubble x10"></div>
+    </div>
     }
 
     return (

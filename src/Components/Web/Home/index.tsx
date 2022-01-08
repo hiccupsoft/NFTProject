@@ -59,13 +59,13 @@ export const Index: React.FC = () => {
 
         <img src={Mark} className={styles.markIcon} width="50%" />
 
-        <Element name="myScrollToElement">
+        <Element name="myScrollToElement" style={{zIndex: 10}}>
             <div className={styles.collection}>
                 <div className={styles.collection_title_first}>Mint your own</div>
                 <div className={styles.collection_title_second}>CTYPTOWHALE</div>
             </div>
         </Element>
-        <div style={{ width: '500px', marginTop: '45px', fontSize: 25, marginBottom: 50, fontFamily: 'Avenir', fontWeight: 300 }}>
+        <div style={{ width: '500px', marginTop: '45px', fontSize: 25, marginBottom: 50, fontFamily: 'Avenir', fontWeight: 300, zIndex: 10 }}>
             <Grid container className="justify-content-center">
                 <Grid item xs={9}>
                     Whale species in the ocean:
