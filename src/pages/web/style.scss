@@ -146,125 +146,126 @@
     transform: translate(-250px, 0);
     opacity: 0.4;
 }
-
-.jellyfish-1{
-    position: absolute;
-    top: 31%;
-    left: 56%;
-    width: 115px !important;
-    height: 230px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    mix-blend-mode: screen;
-    opacity: 0.95;
-    z-index: 10;
-    animation-duration: 1s;
-    animation-name: changewidth1;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in;
-    @keyframes changewidth1 {
-        from {
-            width: 115px;
-            height: 230px;
-            top: 31%;
-        }
-      
-        to {
-            width: 125px;
-            height: 240px;
-            top: calc(31% + 10px);
-        }
-    }
-}
-
-.jellyfish-2 {
-    position: absolute;
-    top: 28%;
-    left: -3%;
-    width: 103px;
-    height: 212px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    mix-blend-mode: screen;
-    opacity: 0.77;
-    z-index: 10;
-    animation-duration: 1.25s;
-    animation-name: changewidth2;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.3, 0.1, 0.8, 0.6);
-    @keyframes changewidth2 {
-        from {
-            width: 103px;
-            height: 212px;
-            top: 28%;
-        }
-      
-        to {
-            width: 110px;
-            height: 220px;
-            top: calc(28% + 7px);
+.home-bg{
+    .jellyfish-home-1{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        width: 370px !important;
+        height: 300px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.95;
+        z-index: 10;
+        animation-duration: 1s;
+        animation-name: anim1;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+        @keyframes anim1 {
+            from {
+                width: 370px;
+                height: 300px;
+                top: 25%;
+            }
+          
+            to {
+                width: 370px;
+                height: 300px;
+                top: calc(25% + 10px);
+            }
         }
     }
-}
-
-.jellyfish-3 {
-    position: absolute;
-    top: 40%;
-    right: 5%;
-    width: 77px ;
-    height: 170px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    mix-blend-mode: screen;
-    opacity: 0.58;
-    z-index: 10;
-    animation-duration: 1.4s;
-    animation-name: changewidth3;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(1.0, 0.3, 0.1, 0.1);
-    @keyframes changewidth3 {
-        from {
-            width: 77px;
-            height: 170px;
-            top: 40%;
-        }
-      
-        to {
-            width: 85px;
-            height: 175px;
-            top: calc(40% + 15px);
+    
+    .jellyfish-home-2 {
+        position: absolute;
+        top: 28%;
+        left: -10%;
+        // width: 103px;
+        // height: 212px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.77;
+        z-index: 10;
+        animation-duration: 1.25s;
+        animation-name: anim2;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.3, 0.1, 0.8, 0.6);
+        @keyframes anim2 {
+            from {
+                // width: 103px;
+                // height: 212px;
+                top: 28%;
+            }
+          
+            to {
+                // width: 110px;
+                // height: 220px;
+                top: calc(28% + 7px);
+            }
         }
     }
-}
-
-.jellyfish-4 {
-    position: absolute;
-    top: 46%;
-    right: 85%;
-    width: 70px !important;
-    height: 155px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    mix-blend-mode: screen;
-    opacity: 0.73;
-    z-index: 10;
-    animation-duration: 0.9s;
-    animation-name: changewidth4;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.3, 0.3, 0.1, 0.9);
-    @keyframes changewidth4 {
-        from {
-            width: 70px;
-            height: 155px;
-            top: 38%;
-            opacity: 0.73;
+    
+    .jellyfish-home-3 {
+        position: absolute;
+        top: 35%;
+        right: 0%;
+        // width: 77px ;
+        // height: 170px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.88;
+        z-index: 10;
+        animation-duration: 1.4s;
+        animation-name: anim3;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(1.0, 0.3, 0.1, 0.1);
+        @keyframes anim3 {
+            from {
+                // width: 77px;
+                // height: 170px;
+                top: 35%;
+            }
+          
+            to {
+                // width: 85px;
+                // height: 175px;
+                top: calc(35% + 15px);
+            }
         }
-      
-        to {
-            width: 80px;
-            height: 160px;
-            top: calc(38% + 10px);
-            opacity: 0.43;
+    }
+    
+    .jellyfish-home-4 {
+        position: absolute;
+        top: 46%;
+        right: 75%;
+        width: 370px !important;
+        height: 300px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        mix-blend-mode: screen;
+        opacity: 0.73;
+        z-index: 10;
+        animation-duration: 0.9s;
+        animation-name: changewidth4;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.9, 0.3, 0.8, 0.8);
+        @keyframes changewidth4 {
+            from {
+                width: 370px;
+                height: 300px;
+                top: 38%;
+                opacity: 0.73;
+            }
+          
+            to {
+                width: 370px;
+                height: 310px;
+                top: calc(38% + 10px);
+                opacity: 0.43;
+            }
         }
     }
 }

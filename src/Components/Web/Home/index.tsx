@@ -43,12 +43,11 @@ export const Index: React.FC = () => {
             {!isDark && <img src={cloud} className={styles.bg_img} />}
             <div className={styles.title}>
                 <div>
-                    <TextDecorator className={styles.title_first} mode={mode} >DIGITAL </TextDecorator>
+                    <TextDecorator className={styles.title_first} mode={mode} >THE </TextDecorator>
                     <TextDecorator className={styles.title_second} mode={mode}>CRYPTO WHALES</TextDecorator>
                 </div>
                 <div>
-                    <TextDecorator className={styles.title_first} mode={mode}>FOR </TextDecorator>
-                    <TextDecorator className={styles.title_second} mode={mode}>CRYPTO WHALES.</TextDecorator>
+                    <TextDecorator className={styles.title_first} mode={mode}>ARE COMING </TextDecorator>
                 </div>
             </div>
             <div className={styles.subtitle}>
@@ -67,21 +66,21 @@ export const Index: React.FC = () => {
                 <div className={styles.collection_title_second}>CTYPTOWHALE</div>
             </div>
         </Element>
-        <div style={{ width: '450px', marginTop: '45px', fontSize: 23, marginBottom: 50, fontFamily: 'Roboto', fontWeight: 100 }}>
+        <div style={{ width: '500px', marginTop: '45px', fontSize: 25, marginBottom: 50, fontFamily: 'Avenir', fontWeight: 300 }}>
             <Grid container className="justify-content-center">
-                <Grid item xs={8}>
+                <Grid item xs={9}>
                     Whale species in the ocean:
                 </Grid>
                 <Grid item xs={3}>
                     10,000
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={9}>
                     Mint Fee:
                 </Grid>
                 <Grid item xs={3}>
                     0.01 ETH
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={9}>
                     Max items per Tx:
                 </Grid>
                 <Grid item xs={3}>
@@ -98,7 +97,7 @@ export const Index: React.FC = () => {
         })}
 
      </Carousel>
-        <CustomButton style={{ marginTop: 205, fontSize: '25px', marginBottom: 513 }} onClick={goTo("/mint")}>
+        <CustomButton style={{ marginTop: 205, fontSize: 30, marginBottom: 513, fontFamily: 'Avenir', fontWeight: 600 }} onClick={goTo("/mint")}>
             MINT NOW
         </CustomButton>
     </div>);

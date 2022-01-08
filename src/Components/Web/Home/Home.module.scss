@@ -10,7 +10,8 @@
         .title_first {
             font-size: 63px;
             line-height: 70px;
-            font-family: Avenir Next;
+            font-family: Avenir;
+            font-weight: 500;
         }
         .title_second {
             font-weight: 900;
@@ -40,11 +41,19 @@
         // color: #FFFFFF;
         text-align: center;
         .collection_title_first{
-            font: normal normal normal 72px/80px Avenir Next;
+            // font: normal normal normal 72px/80px Avenir Next;
+            font-family: Avenir;
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: 0px;
         }
         
         .collection_title_second {
-            font: normal normal bold 72px/80px Avenir Next;
+            // font: normal normal bold 72px/80px Avenir Next;
+            font-family: Avenir;
+            font-size: 72px;
+            font-weight: 600;
+            letter-spacing: 0px;
         }
     }
     .markIcon{

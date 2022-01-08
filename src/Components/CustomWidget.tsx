@@ -7,7 +7,8 @@ export const DiveButton = styled((props: any)=>(<Button {...props} />))`
     box-shadow: 0px 0px 22px #16B4FF48;
     border-radius: 31px;
     line-height: 26px;
-    font-family: Avenir Light;
+    font-family: Avenir;
+    font-weight: 300;
     letter-spacing: 0.95px;
     width: ${(props)=>props.ismobile ? '204px' : '341px'};
     height: ${(props)=>props.ismobile ? '40px' : '62px'};
