@@ -22,6 +22,7 @@ import UnknowWhale from "../../../assests/images/whale3.png";
 // import bg_dark from "../../../assests/images/ocean-background-dark.png";
 import cloud from "../../../assests/images/cloud.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
+import { Countdwon } from './Countdown';
 
 export const Index: React.FC = () => {
 
@@ -49,9 +50,7 @@ export const Index: React.FC = () => {
                 <div>
                     <TextDecorator className={styles.title_first} mode={mode}>ARE COMING </TextDecorator>
                 </div>
-            </div>
-            <div className={styles.subtitle}>
-                <TextDecorator mode={mode}> Only the wealthiest whales can afford the most high end, exclusive Whale NFT’s.</TextDecorator>
+                <Countdwon />
             </div>
             <DiveButton style={{ marginTop: '380px', fontSize: '15px' }} onClick={linkTo}>
                 DIVE INTO THE DEEP
