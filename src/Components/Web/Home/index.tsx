@@ -18,8 +18,8 @@ import _ from 'lodash';
 import BWhale from "../../../assests/images/whale1.png";
 import PWhale from "../../../assests/images/whale2.png";
 import UnknowWhale from "../../../assests/images/whale3.png";
-// import bg_light from "../../../assests/images/ocean-background.png";
-// import bg_dark from "../../../assests/images/ocean-background-dark.png";
+import whale1 from "../../../assests/images/Orca.png";
+import whale2 from "../../../assests/images/Humpback-Whale.png";
 import cloud from "../../../assests/images/cloud.png";
 import { CustomButton, DiveButton } from '../../CustomWidget';
 import { Countdwon } from './Countdown';
@@ -40,7 +40,8 @@ export const Index: React.FC = () => {
     }
     return (<div className={styles.main + " d-flex flex-column align-items-center justify-content-between"}>
         <div className={styles.bg + " d-flex flex-column align-items-center justify-content-between"}>
-            {/* <img src={!isDark ? bg_light : bg_dark} className={styles.bg_img} height="100%" /> */}
+            <img src={whale1} className={styles.bg_img} style={{left: 50, top: 130, width: 200}}/>
+            <img src={whale2} className={styles.bg_img} style={{right: 50, top: 130, width: 250}}/>
             {!isDark && <img src={cloud} className={styles.bg_img} />}
             <div className={styles.title}>
                 <div>

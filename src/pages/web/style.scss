@@ -164,36 +164,36 @@
 	left: 0;
 	position: absolute;
 	right: 0;
-	top: 33%;
-	z-index: 0;
+	top: 22%;
+	z-index: 2;
 }
 
 /* KEYFRAMES */
 
 @-webkit-keyframes animateBubble {
     0% {
-        margin-top: 1000px;
+        margin-top: 1700px;
     }
     100% {
-        margin-top: -60%;
+        margin-top: -10%;
     }
 }
 
 @-moz-keyframes animateBubble {
     0% {
-        margin-top: 1000px;
+        margin-top: 1700px;
     }
     100% {
-        margin-top: -60%;
+        margin-top: -10%;
     }
 }
 
 @keyframes animateBubble {
     0% {
-        margin-top: 1000px;
+        margin-top: 1700px;
     }
     100% {
-        margin-top: -60%;
+        margin-top: -10%;
     }
 }
 

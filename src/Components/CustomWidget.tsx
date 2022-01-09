@@ -15,6 +15,7 @@ export const DiveButton = styled((props: any)=>(<Button {...props} />))`
     color: #FFFFFF;
     padding: 10px;
     transition: all 0.3s;
+    z-index: 2;
     &:before {
         content: "";
         position: absolute;
