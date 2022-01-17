@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useRef } from 'react';
-import jellyfish from "../../assests/images/Jellyfish.png";
+import jellyfish from "../../assests/images/Jellyfish.svg";
 import "./style.scss";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -89,26 +89,27 @@ export const Bg:React.FC = () => {
     }, []);
 
     const renderJellyFish = () => {
-        return <>
-            <img src={jellyfish} className="jellyfish-1"/>
-            <img src={jellyfish} className="jellyfish-2"/>
-            <img src={jellyfish} className="jellyfish-3"/>
-            <img src={jellyfish} className="jellyfish-4"/>
-        </>
+        return <div className="home-bg">
+            <img src={jellyfish} className="jellyfish-home-1"/>
+            <img src={jellyfish} className="jellyfish-home-2"/>
+            <img src={jellyfish} className="jellyfish-home-3"/>
+            <img src={jellyfish} className="jellyfish-home-4"/>
+        </div>
     }
 
     const renderBubbles = () => {
-        return <>
-            <div className="small-1"></div>
-            <div className="small-2"></div>
-            <div className="small-3"></div>
-            <div className="small-4"></div>
-            <div className="small-5"></div>
-            <div className="small-6"></div>
-            <div className="small-7"></div>
-            <div className="small-8"></div>
-            <div className="small-9"></div>
-        </>
+        return <div id="background-wrap">
+        <div className="bubble x1"></div>
+        <div className="bubble x2"></div>
+        <div className="bubble x3"></div>
+        <div className="bubble x4"></div>
+        <div className="bubble x5"></div>
+        <div className="bubble x6"></div>
+        <div className="bubble x7"></div>
+        <div className="bubble x8"></div>
+        <div className="bubble x9"></div>
+        <div className="bubble x10"></div>
+    </div>
     }
 
     return (

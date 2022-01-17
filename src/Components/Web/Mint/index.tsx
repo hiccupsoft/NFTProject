@@ -3,9 +3,8 @@ import React,{useState} from 'react';
 import "./styles.scss";
 import { Box, Button, Grid, styled, } from '@mui/material';
 // import Mark from "../../../assests/images/markIcon.png";
-import Ether from "../../../assests/images/etherIcon.png";
-import Ship from "../../../assests/images/shipIcon.png";
-import Crypto from "../../../assests/images/cyptowhales.png";
+import Ether from "../../../assests/images/etherIcon.svg";
+import Crypto from "../../../assests/images/CryptoWhales-logo.svg";
 import CustomAnimButton from '../CustomAnimButton';
 
 interface MintProps {
@@ -28,7 +27,8 @@ const CustomField = styled((props: any) => (
     text-align: center;
     border-radius: 4px;
     padding: 10px 5px;
-    max-width: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
     font: normal normal 600 18px/21px Work Sans !important;
   `;
 const HoverButton = styled(Button)(({theme})=>({
@@ -43,15 +43,29 @@ const HoverButton = styled(Button)(({theme})=>({
 
 export const Index: React.FC<MintProps> = (props: MintProps) => {
     const [isHover, setHover] = useState(false);
+    const [whales, setWhales] = useState(0)
+
+    const countDown = () => {
+        if(whales === 0) return;
+        setWhales(whales-1)
+    }
+
+    const countUp = () => {
+        setWhales(whales+1)
+    }
+
+    const onChangeWhales = (e: any) => {
+        if(isNaN(e.target.value)) return;
+        setWhales(Number(e.target.value))
+    }
     return (
         <Grid container className="mint_main" >
             <Grid item xs={1} />
-            <Grid item xs={4}>
+            <Grid item xs={4} style={{zIndex: 10}}>
                 <Box className="d-flex flex-column align-items-center justify-content-center l_container" color="white">
                     <Box className="mint_title">Mint your own</Box>
                     <div className="d-flex flex-row align-items-center" style={{marginTop: '-20px'}}>
                         <img src={Crypto} width='350' className='mt-2' />
-                        <img src={Ship} width='25' className="ms-1" style={{marginTop: -25}} />
                     </div>
                     <Box className="d-flex flex-column align-items-center justify-content-between l_element w-100">
                         <Box className="d-flex flex-row px-4 py-2 text_field justify-content-around align-items-center w-100">
@@ -71,9 +85,9 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                                 <Box className="d-flex flex-column align-items-start justify-content-start ">
                                     <Box color="#16B4FF" style={{fontSize:24}}>How many whales?</Box>
                                     <Box className="w-100 mt-3 d-flex flex-row align-items-center justify-content-between" >
-                                            <CustomButton style={{width: 50, height: 50}} >-</CustomButton>
-                                            <CustomField className="input_field w-100" />
-                                            <CustomButton style={{width: 50, height: 50}}>+</CustomButton>
+                                            <CustomButton style={{width: 50, height: 50}} onClick={countDown} >-</CustomButton>
+                                            <CustomField className="input_field w-100" value={whales} onChange={onChangeWhales} />
+                                            <CustomButton style={{width: 50, height: 50}} onClick={countUp}>+</CustomButton>
                                     </Box>
                                 </Box>
                             </Grid>
@@ -103,7 +117,7 @@ export const Index: React.FC<MintProps> = (props: MintProps) => {
                 </Box>
             </Grid>
             <Grid item xs={2} />
-            <Grid item xs={4}>
+            <Grid item xs={4} style={{zIndex: 10}}>
                 <Box className="d-flex flex-column align-items-start justify-content-center r_container" color="white">
                     <Box className="r_title">About</Box>
                     <Box className="r_container mb-3">

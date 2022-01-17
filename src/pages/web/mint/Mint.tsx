@@ -16,8 +16,9 @@ export const Index:React.FC = () => {
 
     return (
         <div className={isDark?"mint_container_dark":"mint_container"}>
-            <Bg />
+            
             <Topbar mode="dark"/>
+            <Bg />
             <Mint />
             <Footer showTitle={true} showButton={true} showIcons={true} >
                 <div className="about_title">NEVER MISS ANYTHING. <span style={{fontWeight: 600}}>JOIN NOW</span></div>

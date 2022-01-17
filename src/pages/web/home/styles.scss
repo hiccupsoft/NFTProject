@@ -1,5 +1,5 @@
 .home_container {
-    background-image: linear-gradient(180deg,#99D3E5 0%,#99D3E5 10%, #053554 15.5%, #000000 100%);
+    background-image: linear-gradient(180deg,#99D3E5 0%,#99D3E5 15%, #053554 20.5%, #000000 100%);
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
@@ -14,7 +14,7 @@
 
 .dark_theme_bg {
     background-image: url("../../../assests/images/cryptowhales-dark-background.jpg");
-    background-size: 100% 15%;
+    background-size: 100% 19%;
     background-position: left left;
     background-repeat: no-repeat;
     width: 100%;
@@ -38,8 +38,9 @@
     background-image: url("../../../assests/images/1.png");
     background-size: 25% 100%;
     animation: waveAni 50s linear infinite;
-    top: 470px;
+    top: 650px;
     height: 450px;
+    z-index: 1;
   }
 
   .home_background.dark {

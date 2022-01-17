@@ -3,8 +3,8 @@
 import React, {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Mark from "../../../assests/images/markIcon.png";
-import Dark from "../../../assests/images/Dark-toggle-icon.png";
-import Light from "../../../assests/images/Daylight-toggle.png";
+import Dark from "../../../assests/images/Dark-toggle-icon.svg";
+import Light from "../../../assests/images/Light-toggle-icon.svg";
 import PieIcon from "../../../assests/images/pieIcon.png";
 import './styles.scss';
 import { Box, Button, IconButton } from '@mui/material';

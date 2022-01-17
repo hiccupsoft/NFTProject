@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useRef } from 'react';
-import jellyfish from "../../assests/images/Jellyfish.png";
+import jellyfish from "../../assests/images/Jellyfish.svg";
 import "./style.scss";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
